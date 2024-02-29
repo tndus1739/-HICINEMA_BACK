@@ -1,0 +1,58 @@
+.gr_all {
+    background: green url("https://www.lottecinema.co.kr/NLCHS/Content/images/common/grade_all.png") 0 0 no-repeat;
+    background-size: 100%;
+    content: "";
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.gr_12 {
+    background: #e9b630 url("https://www.lottecinema.co.kr/NLCHS/Content/images/common/grade_12.png") 0 0 no-repeat;
+    background-size: 100%;
+    content: "12";
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Roboto",serif;
+}
+
+.gr_15 {
+    background: #dd7430 url("https://www.lottecinema.co.kr/NLCHS/Content/images/common/grade_15.png") 0 0 no-repeat;
+    background-size: 100%;
+    content: "12";
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Roboto",serif;
+}
+
+.gr_18 {
+    background: #d92b36 url("https://www.lottecinema.co.kr/NLCHS/Content/images/common/grade_18.png") 0 0 no-repeat;
+    background-size: 100%;
+    content: "12";
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Roboto",serif;
+}
+
+.gr_none {
+    background: #484848 url("https://www.lottecinema.co.kr/NLCHS/Content/images/common/grade_non.png") 0 0 no-repeat;
+    background-size: 100%;
+    content: "12";
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Roboto",serif;
+}

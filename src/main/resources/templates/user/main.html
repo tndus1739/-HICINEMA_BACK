@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout_user2}">
+
+<th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{/css/header_main.css}"/>
+    <link rel="stylesheet" th:href="@{/css/reset_knk.css}">
+    <link rel="stylesheet" th:href="@{/style_knk.css}">
+    <!-- Color CSS -->
+    <link rel="stylesheet" th:href="@{/css/color/color1_knk.css}">
+</th:block>
+
+<div layout:fragment="content">
+    <section class="hero-area4">
+        <div class="container1">
+            <div class="row">
+                <div class="home-slider-4">
+                    <div class="big-content" style="background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.25) 15%, rgba(0,0,0,0.14) 20%, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 42%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 57%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.14) 80%, rgba(0,0,0,0.25) 85%, rgba(0,0,0,0.5) 90%, rgba(0,0,0,1) 100%),
+					url('/img_knk/banner/aespa_19207742.jpg');">
+                    </div>
+                    <div class="big-content" style="background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.25) 15%, rgba(0,0,0,0.14) 20%, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 42%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 57%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.14) 80%, rgba(0,0,0,0.25) 85%, rgba(0,0,0,0.5) 90%, rgba(0,0,0,1) 100%),
+					url('/img_knk/banner/BabyShark_1920774.jpg');">
+                    </div>
+                    <div class="big-content" style="background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.25) 15%, rgba(0,0,0,0.14) 20%, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 42%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 57%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.14) 80%, rgba(0,0,0,0.25) 85%, rgba(0,0,0,0.5) 90%, rgba(0,0,0,1) 100%),
+					url('/img_knk/banner/IfOnly_1920774.jpg');">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Hero Area 2 -->
+
+    <!-- Start Most Popular -->
+    <div class="product-area most-popular section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2>박스오피스</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="owl-carousel popular-slider">
+                        <!-- Start Single Product -->
+                        <div class="single-product">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img"
+                                         src="https://cf2.lottecinema.co.kr/lotte_image/2024/DMZanimals/DMZanimals_184262.jpg"
+                                         alt="DMZ 동물특공대 2월 14일 대개봉 전체관람가 핑크퐁 제작진">
+                                    <img class="hover-img"
+                                         src="https://cf2.lottecinema.co.kr/lotte_image/2024/DMZanimals/DMZanimals_184262.jpg"
+                                         alt="DMZ 동물특공대 2월 14일 대개봉 전체관람가 핑크퐁 제작진">
+                                </a>
+                                <!-- <div class="button-head">
+                                    <div class="product-action">
+                                        <a data-toggle="modal" data-target="#exampleModal" title="Quick View"
+                                            href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                        <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to
+                                                Wishlist</span></a>
+                                        <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to
+                                                Compare</span></a>
+                                    </div>
+                                    <div class="product-action-2">
+                                        <a title="Add to cart" href="#">Add to cart</a>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="product-content">
+                                <a href="#">
+                                    <div class="boxoffice-btn">
+                                        <h>예매</h>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End Single Product -->
+                        <!-- Start Single Product -->
+                        <div class="single-product">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img"
+                                         src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20661_101_1.jpg"
+                                         alt="시민덕희">
+                                    <img class="hover-img"
+                                         src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20661_101_1.jpg"
+                                         alt="시민덕희">
+                                </a>
+                                <!-- <div class="button-head">
+                                    <div class="product-action">
+                                        <a data-toggle="modal" data-target="#exampleModal" title="Quick View"
+                                            href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                        <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to
+                                                Wishlist</span></a>
+                                        <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to
+                                                Compare</span></a>
+                                    </div>
+                                    <div class="product-action-2">
+                                        <a title="Add to cart" href="#">Add to cart</a>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="product-content">
+                                <a href="#">
+                                    <div class="boxoffice-btn">
+                                        <h>예매</h>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End Single Product -->
+                        <!-- Start Single Product -->
+                        <div class="single-product">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img"
+                                         src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_101_1.jpg"
+                                         alt="소풍">
+                                    <img class="hover-img"
+                                         src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_101_1.jpg"
+                                         alt="소풍">
+                                </a>
+                                <!-- <div class="button-head">
+                                    <div class="product-action">
+                                        <a data-toggle="modal" data-target="#exampleModal" title="Quick View"
+                                            href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                        <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to
+                                                Wishlist</span></a>
+                                        <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to
+                                                Compare</span></a>
+                                    </div>
+                                    <div class="product-action-2">
+                                        <a title="Add to cart" href="#">Add to cart</a>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="product-content">
+                                <a href="#">
+                                    <div class="boxoffice-btn">
+                                        <h>예매</h>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End Single Product -->
+                        <!-- Start Single Product -->
+                        <div class="single-product">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img"
+                                         src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20754_101_1.jpg"
+                                         alt="도그데이즈">
+                                    <img class="hover-img"
+                                         src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20754_101_1.jpg"
+                                         alt="도그데이즈">
+                                </a>
+                                <!-- <div class="button-head">
+                                    <div class="product-action">
+                                        <a data-toggle="modal" data-target="#exampleModal" title="Quick View"
+                                            href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                        <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to
+                                                Wishlist</span></a>
+                                        <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to
+                                                Compare</span></a>
+                                    </div>
+                                    <div class="product-action-2">
+                                        <a title="Add to cart" href="#">Add to cart</a>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="product-content">
+                                <a href="#">
+                                    <div class="boxoffice-btn">
+                                        <h>예매</h>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End Single Product -->
+                        <!-- Start Single Product -->
+                        <div class="single-product">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img"
+                                         src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20710_101_1.jpg"
+                                         alt="듄: 파트2">
+                                    <img class="hover-img"
+                                         src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20710_101_1.jpg"
+                                         alt="듄: 파트2">
+                                </a>
+                                <!-- <div class="button-head">
+                                    <div class="product-action">
+                                        <a data-toggle="modal" data-target="#exampleModal" title="Quick View"
+                                            href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                        <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to
+                                                Wishlist</span></a>
+                                        <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to
+                                                Compare</span></a>
+                                    </div>
+                                    <div class="product-action-2">
+                                        <a title="Add to cart" href="#">Add to cart</a>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="product-content">
+                                <a href="#">
+                                    <div class="boxoffice-btn">
+                                        <h>예매</h>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End Single Product -->
+                        <!-- Start Single Product -->
+                        <div class="single-product">
+                            <div class="product-img">
+                                <a href="product-details.html">
+                                    <img class="default-img"
+                                         src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20756_101_1.jpg"
+                                         alt="데드맨">
+                                    <img class="hover-img"
+                                         src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20756_101_1.jpg"
+                                         alt="데드맨">
+                                </a>
+                                <!-- <div class="button-head">
+                                    <div class="product-action">
+                                        <a data-toggle="modal" data-target="#exampleModal" title="Quick View"
+                                            href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                        <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to
+                                                Wishlist</span></a>
+                                        <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to
+                                                Compare</span></a>
+                                    </div>
+                                    <div class="product-action-2">
+                                        <a title="Add to cart" href="#">Add to cart</a>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="product-content">
+                                <a href="#">
+                                    <div class="boxoffice-btn">
+                                        <h>예매</h>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End Single Product -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Most Popular Area -->
+    <br><br><br><br><br><br><br><br>
+
+    <!-- Start Area 2 -->
+    <section class="hero-area3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title1">
+                        <h3>이벤트</h3>
+                        <a href="#">
+                            <h>더보기 ></h>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-4 col-12">
+                    <div class="small-content first">
+                        <img src="img_knk/event/2.png">
+                    </div>
+                    <div class="small-content secound">
+                        <img src="img_knk/event/3.png">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-12">
+                    <div class="big-content">
+                        <img src="img_knk/event/1.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Hero Area 2 -->
+
+    <br><br><br><br><br><br><br><br>
+
+    <!--공지사항 시작-->
+    <section class="notice">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title1">
+                        <h3>공지사항</h3>
+                        <br><br>
+                    </div>
+                    <div id="clear"></div>
+                    <article class="help_box1">
+                        <div class="notice-box1">
+                            <ul>
+                                <li class="active"><a href="#"><b>전체 공지</b></a>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt><strong class="bar">전체</strong>
+                                                    <h>2024.01.30</h>
+                                                </dt>
+                                                <dd><a href="#">[행사/이벤트] [웡카] 4DX 신규 초콜릿향 진행극장 변경 안내 (1/31~2/6)</a>
+                                                </dd>
+                                                <hr>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt><strong class="bar">전체</strong>
+                                                    <h>2024.01.30</h>
+                                                </dt>
+                                                <dd><a href="#">[행사/이벤트] [웡카] 4DX 신규 초콜릿향 진행극장 변경 안내 (1/31~2/6)</a>
+                                                </dd>
+                                                <hr>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt><strong class="bar">전체</strong>
+                                                    <h>2024.01.30</h>
+                                                </dt>
+                                                <dd><a href="#">[행사/이벤트] [웡카] 4DX 신규 초콜릿향 진행극장 변경 안내 (1/31~2/6)</a>
+                                                </dd>
+                                                <hr>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="active1"><a href="#"><b>영화관 공지</b></a>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt><strong class="bar">영화관</strong>
+                                                    <h>2024.02.14</h>
+                                                </dt>
+                                                <dd><a href="#">[경주] 영업 종료 안내 - 2024년 2월 29일</a></dd>
+                                                <hr>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt><strong class="bar">전체</strong>
+                                                    <h>2024.01.30</h>
+                                                </dt>
+                                                <dd><a href="#">[행사/이벤트] [웡카] 4DX 신규 초콜릿향 진행극장 변경 안내 (1/31~2/6)</a>
+                                                </dd>
+                                                <hr>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt><strong class="bar">영화관</strong>
+                                                    <h>2024.02.08</h>
+                                                </dt>
+                                                <dd><a href="#">[남양주현대아울렛] 설 당일 주차장 이용 안내</a></dd>
+                                                <hr>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="help_box2">
+                        <div class="notice-box2">
+                            <div class="notice-box2-inquiry"><a href="#"><img src="img_knk/icon/inquiry0.png">
+                                <div id="clear"></div>
+                                <h>1:1 문의</h>
+                            </a>
+                            </div>
+                            <div class="notice-box2-question"><a href="#"><img src="img_knk/icon/question0.png">
+                                <div id="clear"></div>
+                                <h>자주 묻는 질문</h>
+                            </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--공지사항 끝-->
+    <div id="clear"></div>
+    <br><br><br><br><br><br><br><br>
+</div>
+
+<!-- Start Area 2 -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close"
+                                                                                                  aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row no-gutters">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <!-- Product Slider -->
+                        <div class="product-gallery">
+                            <div class="quickview-slider-active">
+                                <div class="single-slider">
+                                    <img src="https://cf2.lottecinema.co.kr/lotte_image/2024/DMZanimals/DMZanimals_184262.jpg"
+                                         alt="DMZ 동물특공대 2월 14일 대개봉 전체관람가 핑크퐁 제작진">
+                                </div>
+                                <div class="single-slider">
+                                    <img src="https://via.placeholder.com/569x528" alt="#">
+                                </div>
+                                <div class="single-slider">
+                                    <img src="https://via.placeholder.com/569x528" alt="#">
+                                </div>
+                                <div class="single-slider">
+                                    <img src="https://via.placeholder.com/569x528" alt="#">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Product slider -->
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <div class="quickview-content">
+                            <h2>Flared Shift Dress</h2>
+                            <div class="quickview-ratting-review">
+                                <div class="quickview-ratting-wrap">
+                                    <div class="quickview-ratting">
+                                        <i class="yellow fa fa-star"></i>
+                                        <i class="yellow fa fa-star"></i>
+                                        <i class="yellow fa fa-star"></i>
+                                        <i class="yellow fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <a href="#"> (1 customer review)</a>
+                                </div>
+                                <div class="quickview-stock">
+                                    <span><i class="fa fa-check-circle-o"></i> in stock</span>
+                                </div>
+                            </div>
+                            <h3>$29.00</h3>
+                            <div class="quickview-peragraph">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iste laborum
+                                    ad impedit pariatur esse optio tempora sint ullam autem deleniti nam in quos qui
+                                    nemo ipsum numquam.</p>
+                            </div>
+                            <div class="size">
+                                <div class="row">
+                                    <div class="col-lg-6 col-12">
+                                        <h5 class="title">Size</h5>
+                                        <select>
+                                            <option selected="selected">s</option>
+                                            <option>m</option>
+                                            <option>l</option>
+                                            <option>xl</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <h5 class="title">Color</h5>
+                                        <select>
+                                            <option selected="selected">orange</option>
+                                            <option>purple</option>
+                                            <option>black</option>
+                                            <option>pink</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quantity">
+                                <!-- Input Order -->
+                                <div class="input-group">
+                                    <div class="button minus">
+                                        <button type="button" class="btn btn-primary btn-number" disabled="disabled"
+                                                data-type="minus" data-field="quant[1]">
+                                            <i class="ti-minus"></i>
+                                        </button>
+                                    </div>
+                                    <input type="text" name="quant[1]" class="input-number" data-min="1"
+                                           data-max="1000" value="1">
+                                    <div class="button plus">
+                                        <button type="button" class="btn btn-primary btn-number" data-type="plus"
+                                                data-field="quant[1]">
+                                            <i class="ti-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!--/ End Input Order -->
+                            </div>
+                            <div class="add-to-cart">
+                                <a href="#" class="btn">Add to cart</a>
+                                <a href="#" class="btn min"><i class="ti-heart"></i></a>
+                                <a href="#" class="btn min"><i class="fa fa-compress"></i></a>
+                            </div>
+                            <div class="default-social">
+                                <h4 class="share-now">Share:</h4>
+                                <ul>
+                                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="youtube" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                    <li><a class="dribbble" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal end -->
+<th:block layout:fragment="script">
+    <script>
+        //공지사항 탭 메뉴
+        var tabMenu = $(".notice-box1");
+
+        //컨텐츠 내용을 숨겨주세요!
+        tabMenu.find("ul > li > ul").hide();
+        tabMenu.find("li.active > ul").show();
+
+        function tabList(e) {
+            e.preventDefault();       //#의 기능을 차단
+            var target = $(this);
+            target.next().show().parent("li").addClass("active").siblings("li").removeClass("active").find("ul").hide();
+            //버튼을 클릭하면 ~ div를 보여주고
+            //부모의 li 태그에 클래스 추가하고
+            //형제의 li 태그에 클래스 제거하고
+            //제거한 자식의 div 태그를 숨겨줌
+        }
+
+        tabMenu.find("ul > li > a").click(tabList).focus(tabList);
+
+    </script>
+</th:block>
+</html>

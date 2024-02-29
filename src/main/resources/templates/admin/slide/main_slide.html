@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout_admin}">
+
+<th:block layout:fragment="css">
+<link rel="stylesheet" type="text/css" th:href="@{admin/css/slide_upload.css}" />
+
+</th:block>
+
+<div class="container-scroller">
+
+    <div class="container-fluid page-body-wrapper">
+
+        <div class="main-panel">
+        
+        	<div layout:fragment="content" class="content-wrapper">
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="form-group">
+                    <h3>
+                      <i class="mdi mdi-ticket"></i
+                      >메인 슬라이드
+                    </h3>
+
+
+                    <div class="tab_content">
+
+                      <input type="radio" name="tabmenu" id="tab01" checked>
+                      <label for="tab01"><i class="mdi mdi-receipt"></i
+                        >슬라이드 사진 목록</label>
+                      <input type="radio"  name="tabmenu" id="tab02">
+                      <label for="tab02"><i class="mdi mdi-camera"></i
+                        >사진 등록</label>
+                        <div class="conbox con1">
+
+
+                          <table class="slide_list" style="margin-left: auto; margin-right: auto;""
+                        >
+                            <thead>
+                              <tr >
+                                <th>번호</th>
+                                <th>사진</th>
+                                <th>사진 이름</th>
+                                <th>수정</th>
+                                <th>삭제</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            
+      
+      
+                              <tr>
+                                <td>1</td>
+                                <td><img src="images/aespa.jpg" alt="사진1" /></td>
+                                <td>image</td>
+                                <td>
+                                  <button class="edit_button">
+                                    <i class="mdi mdi-pencil-box-outline" ></i>
+                                  </button>
+                                </td>
+                                <td>
+                                  <button
+                                  class="edit_button"
+                                  >
+                                    <i class="mdi mdi-close-box-outline"></i>
+                                  </button>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>2</td>
+                                <td><img src="images/IfOnly.jpg" alt="사진1" /></td>
+                                <td>image</td>
+                                <td>
+                                  <button class="edit_button">
+                                    <i class="mdi mdi-pencil-box-outline" ></i>
+                                  </button>
+                                </td>
+                                <td>
+                                  <button
+                                  class="edit_button"
+                                  >
+                                    <i class="mdi mdi-close-box-outline"></i>
+                                  </button>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>3</td>
+                                <td><img src="images/aespa.jpg" alt="사진1" /></td>
+                                <td>image</td>
+                                <td>
+                                  <button class="edit_button">
+                                    <i class="mdi mdi-pencil-box-outline" ></i>
+                                  </button>
+                                </td>
+                                <td>
+                                  <button
+                                  class="edit_button"
+                                  >
+                                    <i class="mdi mdi-close-box-outline"></i>
+                                  </button>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>4</td>
+                                <td><img src="images/IfOnly.jpg" alt="사진1" /></td>
+                                <td>image</td>
+                                <td>
+                                  <button class="edit_button">
+                                    <i class="mdi mdi-pencil-box-outline" ></i>
+                                  </button>
+                                </td>
+                                <td>
+                                  <button
+                                  class="edit_button"
+                                  >
+                                    <i class="mdi mdi-close-box-outline"></i>
+                                  </button>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>5</td>
+                                <td><img src="images/aespa.jpg" alt="사진1" /></td>
+                                <td>image</td>
+                                <td>
+                                  <button class="edit_button">
+                                    <i class="mdi mdi-pencil-box-outline" ></i>
+                                  </button>
+                                </td>
+                                <td>
+                                  <button
+                                  class="edit_button"
+                                  >
+                                    <i class="mdi mdi-close-box-outline"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                            
+                            </tbody>
+                          </table>
+
+                        </div>
+                        <div class="conbox con2"> 
+                          
+                      
+                              <div id='image_preview'>
+
+                                <!-- <h3>이미지 미리보기 </h3> -->
+                                <input type='file' id='btnAtt' multiple='multiple'/>
+
+                                <div id='att_zone' 
+                                      data-placeholder='파일을 첨부 하려면 파일 선택 버튼을 클릭하거나 파일을 드래그 해주세요'></div>
+                              </div>
+
+                  	        </div>
+
+                  	   </div>
+
+                    </div>
+                  </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:../../partials/_footer.html -->
+              </div>
+            </div>
+          </div>
+          
+      </div>
+     
+ </div>
+  
+</div>
+          
+      
+
+</html>
+          
+        
+     
+     

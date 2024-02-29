@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout_user1}">
+
+<th:block layout:fragment="css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" th:href="@{/css/ticketing.css}">
+</th:block>
+
+<div layout:fragment="content">
+
+    <!-- Shopping Cart -->
+    <div class="shopping-cart section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-lg-4 ticketing">
+                            <div class="ticketing-header">
+                                <div class="ticketing-title">
+                                    영화관 선택
+                                </div>
+                            </div>
+                            <div class="theater-location">
+                                <ul>
+                                    <li class="loc active">
+                                        <span class="loc-name active"><strong>서울</strong></span>
+                                        <span class="loc-cnt">(11)</span>
+                                    </li>
+                                    <li class="loc">
+                                        <span class="loc-name"><strong>경기/인천</strong></span>
+                                        <span class="loc-cnt">(11)</span>
+                                    </li>
+                                    <li class="loc">
+                                        <span class="loc-name"><strong>충천/대전</strong></span>
+                                        <span class="loc-cnt">(11)</span>
+                                    </li>
+                                    <li class="loc">
+                                        <span class="loc-name"><strong>전라/광주</strong></span>
+                                        <span class="loc-cnt">(11)</span>
+                                    </li>
+                                    <li class="loc">
+                                        <span class="loc-name"><strong>경북/대구</strong></span>
+                                        <span class="loc-cnt">(11)</span>
+                                    </li>
+                                    <li class="loc">
+                                        <span class="loc-name"><strong>전라/광주</strong></span>
+                                        <span class="loc-cnt">(11)</span>
+                                    </li>
+                                    <li class="loc">
+                                        <span class="loc-name"><strong>경남/부산/울산</strong></span>
+                                        <span class="loc-cnt">(11)</span>
+                                    </li>
+                                    <li class="loc">
+                                        <span class="loc-name"><strong>강원</strong></span>
+                                        <span class="loc-cnt">(11)</span></li>
+                                    <li class="loc">
+                                        <span class="loc-name"><strong>제주</strong></span>
+                                        <span class="loc-cnt">(11)</span></li>
+                                </ul>
+                            </div>
+                            <div class="theater-select">
+                                <ul>
+                                    <li class="theaters active">
+                                        <span class="theater-name active"><strong>가산디지털</strong></span>
+                                    </li>
+                                    <li class="theaters">
+                                        <span class="theater-name"><strong>가양</strong></span>
+                                    </li>
+                                    <li class="theaters">
+                                        <span class="theater-name"><strong>강동</strong></span>
+                                    </li>
+                                    <li class="theaters">
+                                        <span class="theater-name"><strong>건대입구</strong></span>
+                                    </li>
+                                    <li class="theaters">
+                                        <span class="theater-name"><strong>김포공항</strong></span>
+                                    </li>
+                                    <li class="theaters">
+                                        <span class="theater-name"><strong>노원</strong></span>
+                                    </li>
+                                    <li class="theaters">
+                                        <span class="theater-name"><strong>독산</strong></span>
+                                    </li>
+                                    <li class="theaters">
+                                        <span class="theater-name"><strong>신사</strong></span>
+                                    </li>
+                                    <li class="theaters">
+                                        <span class="theater-name"><strong>서울대입구</strong></span>
+                                    </li>
+                                    <li class="theaters">
+                                        <span class="theater-name"><strong>수락산</strong></span>
+                                    </li>
+                                    <li class="theaters">
+                                        <span class="theater-name"><strong>수유</strong></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 ticketing">
+                            <div class="ticketing-header">
+                                <div class="ticketing-title">
+                                    영화 선택
+                                </div>
+                            </div>
+                            <div class="movie-select">
+                                <ul>
+                                    <li class="movies active">
+                                        <strong class="movie-list-info">
+                                            <span class="gr_15"></span>
+                                            <span class="movie-name">
+											영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목
+										</span>
+                                        </strong>
+                                    </li>
+                                    <li class="movies">
+                                        <strong class="movie-list-info">
+                                            <span class="gr_all"></span>
+                                            <span class="movie-name">
+											영화제목
+										</span>
+                                        </strong>
+                                    </li>
+                                    <li class="movies">
+                                        <strong class="movie-list-info">
+                                            <span class="gr_12"></span>
+                                            <span class="movie-name">
+											영화제목
+										</span>
+                                        </strong>
+                                    </li>
+                                    <li class="movies">
+                                        <strong class="movie-list-info">
+                                            <span class="gr_18"></span>
+                                            <span class="movie-name">
+											영화제목
+										</span>
+                                        </strong>
+                                    </li>
+                                    <li class="movies">
+                                        <strong class="movie-list-info">
+                                            <span class="gr_none"></span>
+                                            <span class="movie-name">
+											영화제목
+										</span>
+                                        </strong>
+                                    </li>
+                                    <li class="movies">
+                                        <strong class="movie-list-info">
+                                            <span class="gr_all"></span>
+                                            <span class="movie-name">
+											영화제목
+										</span>
+                                        </strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 ticketing">
+                            <div class="ticketing-header">
+                                <div class="ticketing-title">
+                                    시간
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="datepicker"></div>
+                                <div class="year-month">
+                                    <div id="month">
+                                        <span id="year_val"></span>
+                                    </div>
+                                </div>
+                                <div id="datepicker_row"></div>
+                            </div>
+                            <div class="reservations">
+                                <ul>
+                                    <li class="reservation">
+                                        <div class="screen-info">
+                                            <div class="screen-time">
+                                                <p class="time start">11:00</p>
+                                                ~
+                                                <p class="time end">12:35</p>
+                                            </div>
+                                            <div class="screen-movie">
+                                                <div class="movie-content">
+                                                    <div class="movie-title">
+                                                        <strong>웡카</strong></div>
+                                                    <div class="movie-detail-info">
+                                                        <em class="movie-dimension">2D</em>
+                                                        <em class="movie-caption">(자막)</em>
+                                                    </div>
+                                                </div>
+                                                <div class="screen-details">
+                                                    <div class="screen-detail">3관</div>
+                                                    <div class="screen-seat">50/130</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="reservation">
+                                        <div class="screen-info">
+                                            <div class="screen-time">
+                                                <p class="time start">11:00</p>
+                                                ~
+                                                <p class="time end">12:35</p>
+                                            </div>
+                                            <div class="screen-movie">
+                                                <div class="movie-content">
+                                                    <div class="movie-title">
+                                                        <strong>웡카</strong></div>
+                                                    <div class="movie-detail-info">
+                                                        <em class="movie-dimension">2D</em>
+                                                        <em class="movie-caption">(자막)</em>
+                                                    </div>
+                                                </div>
+                                                <div class="screen-details">
+                                                    <div class="screen-detail">3관</div>
+                                                    <div class="screen-seat">50/130</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="reservation">
+                                        <div class="screen-info">
+                                            <div class="screen-time">
+                                                <p class="time start">11:00</p>
+                                                ~
+                                                <p class="time end">12:35</p>
+                                            </div>
+                                            <div class="screen-movie">
+                                                <div class="movie-content">
+                                                    <div class="movie-title">
+                                                        <strong>웡카</strong></div>
+                                                    <div class="movie-detail-info">
+                                                        <em class="movie-dimension">2D</em>
+                                                        <em class="movie-caption">(자막)</em>
+                                                    </div>
+                                                </div>
+                                                <div class="screen-details">
+                                                    <div class="screen-detail">3관</div>
+                                                    <div class="screen-seat">50/130</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="reservation">
+                                        <div class="screen-info">
+                                            <div class="screen-time">
+                                                <p class="time start">11:00</p>
+                                                ~
+                                                <p class="time end">12:35</p>
+                                            </div>
+                                            <div class="screen-movie">
+                                                <div class="movie-content">
+                                                    <div class="movie-title">
+                                                        <strong>웡카</strong></div>
+                                                    <div class="movie-detail-info">
+                                                        <em class="movie-dimension">2D</em>
+                                                        <em class="movie-caption">(자막)</em>
+                                                    </div>
+                                                </div>
+                                                <div class="screen-details">
+                                                    <div class="screen-detail">3관</div>
+                                                    <div class="screen-seat">50/130</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="reservation">
+                                        <div class="screen-info">
+                                            <div class="screen-time">
+                                                <p class="time start">11:00</p>
+                                                ~
+                                                <p class="time end">12:35</p>
+                                            </div>
+                                            <div class="screen-movie">
+                                                <div class="movie-content">
+                                                    <div class="movie-title">
+                                                        <strong>웡카</strong></div>
+                                                    <div class="movie-detail-info">
+                                                        <em class="movie-dimension">2D</em>
+                                                        <em class="movie-caption">(자막)</em>
+                                                    </div>
+                                                </div>
+                                                <div class="screen-details">
+                                                    <div class="screen-detail">3관</div>
+                                                    <div class="screen-seat">50/130</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="reservation">
+                                        <div class="screen-info">
+                                            <div class="screen-time">
+                                                <p class="time start">11:00</p>
+                                                ~
+                                                <p class="time end">12:35</p>
+                                            </div>
+                                            <div class="screen-movie">
+                                                <div class="movie-content">
+                                                    <div class="movie-title">
+                                                        <strong>웡카</strong></div>
+                                                    <div class="movie-detail-info">
+                                                        <em class="movie-dimension">2D</em>
+                                                        <em class="movie-caption">(자막)</em>
+                                                    </div>
+                                                </div>
+                                                <div class="screen-details">
+                                                    <div class="screen-detail">3관</div>
+                                                    <div class="screen-seat">50/130</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ End Shopping Cart -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close"
+                                                                                                      aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <!-- Product Slider -->
+                            <div class="product-gallery">
+                                <div class="quickview-slider-active">
+                                    <div class="single-slider">
+                                        <img src="images/modal1.jpg" alt="#">
+                                    </div>
+                                    <div class="single-slider">
+                                        <img src="images/modal2.jpg" alt="#">
+                                    </div>
+                                    <div class="single-slider">
+                                        <img src="images/modal3.jpg" alt="#">
+                                    </div>
+                                    <div class="single-slider">
+                                        <img src="images/modal4.jpg" alt="#">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Product slider -->
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <div class="quickview-content">
+                                <h2>Flared Shift Dress</h2>
+                                <div class="quickview-ratting-review">
+                                    <div class="quickview-ratting-wrap">
+                                        <div class="quickview-ratting">
+                                            <i class="yellow fa fa-star"></i>
+                                            <i class="yellow fa fa-star"></i>
+                                            <i class="yellow fa fa-star"></i>
+                                            <i class="yellow fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <a href="#"> (1 customer review)</a>
+                                    </div>
+                                    <div class="quickview-stock">
+                                        <span><i class="fa fa-check-circle-o"></i> in stock</span>
+                                    </div>
+                                </div>
+                                <h3>$29.00</h3>
+                                <div class="quickview-peragraph">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iste laborum
+                                        ad
+                                        impedit pariatur esse optio tempora sint ullam autem deleniti nam in quos qui
+                                        nemo
+                                        ipsum numquam.</p>
+                                </div>
+                                <div class="size">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-12">
+                                            <h5 class="title">Size</h5>
+                                            <select>
+                                                <option selected="selected">s</option>
+                                                <option>m</option>
+                                                <option>l</option>
+                                                <option>xl</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <h5 class="title">Color</h5>
+                                            <select>
+                                                <option selected="selected">orange</option>
+                                                <option>purple</option>
+                                                <option>black</option>
+                                                <option>pink</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quantity">
+                                    <!-- Input Order -->
+                                    <div class="input-group">
+                                        <div class="button minus">
+                                            <button type="button" class="btn btn-primary btn-number" disabled="disabled"
+                                                    data-type="minus" data-field="quant[1]">
+                                                <i class="ti-minus"></i>
+                                            </button>
+                                        </div>
+                                        <input type="text" name="quant[1]" class="input-number" data-min="1"
+                                               data-max="1000"
+                                               value="1">
+                                        <div class="button plus">
+                                            <button type="button" class="btn btn-primary btn-number" data-type="plus"
+                                                    data-field="quant[1]">
+                                                <i class="ti-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!--/ End Input Order -->
+                                </div>
+                                <div class="add-to-cart">
+                                    <a href="#" class="btn">Add to cart</a>
+                                    <a href="#" class="btn min"><i class="ti-heart"></i></a>
+                                    <a href="#" class="btn min"><i class="fa fa-compress"></i></a>
+                                </div>
+                                <div class="default-social">
+                                    <h4 class="share-now">Share:</h4>
+                                    <ul>
+                                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a class="youtube" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                        <li><a class="dribbble" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
+
+</div>
+
+<th:block layout:fragment="script">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        let datepicker = async () => {
+            $("#datepicker").datepicker({
+                showOtherMonths: true,
+                minDate: 0,
+                monthNames: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"], // 숫자로 된 월 이름 배열
+                // 다른 옵션들...
+                beforeShowDay: function (date) {
+                    // Check if the date is Sunday (0)
+                    if (date.getDay() === 0) {
+                        // Apply highlighted class to Sundays
+                        return [true, "highlighted", ""];
+                    }
+                    // Otherwise, return as is
+                    return [true, "", ""];
+                }
+            });
+            await draw_datepicker();
+        }
+
+        let draw_datepicker = () => {
+            let date = document.querySelectorAll(".ui-datepicker-calendar tbody td");
+            let d = [];
+            let next = document.createElement("button")
+            let prev = document.createElement("button")
+            next.textContent = '▶'
+            next.id = 'next'
+            prev.textContent = '◀'
+            prev.id = 'prev'
+            let years = document.querySelector(".ui-datepicker-year").textContent;
+            let months = document.querySelector(".ui-datepicker-month").textContent;
+            document.getElementById("datepicker_row").append(prev)
+            for (let k of date) {
+                let a = k.children[0];
+                let obj = {};
+                obj['tag'] = a.tagName;
+                obj['date'] = a.textContent;
+                obj['class'] = Array.from(k.classList);
+                let tag1 = document.createElement("div")
+                for (let c of obj['class']) {
+                    tag1.classList.add(c)
+                }
+                // tag1.style.float = "left";
+
+                let dt = years + "-" + months + "-" + a.textContent;
+                let dw = new Date(dt).getDay()
+                let arr_dw = ["일", "월", "화", "수", "목", "금", "토", "일"]
+
+                tag1.innerHTML = "<strong><p>" + a.textContent + "</p><p>" + arr_dw[dw] + "</p></strong>";
+                document.getElementById("datepicker_row").append(tag1)
+                // document.getElementById("datepicker_row").append(tag1)
+                d.push(obj);
+            }
+            document.getElementById("datepicker_row").append(next)
+            if (document.getElementById("prev")) {
+                if (Number(months) === new Date().getMonth() + 1) {
+                    document.getElementById("prev").style.display = 'none';
+                }
+            }
+            let month_val = months;
+            let year_val = years;
+            if (months.indexOf("0") == 0) {
+                month_val = months.replace("0", "")
+            }
+            // document.getElementById("month_val").textContent = month_val + " 월"
+            document.getElementById("year_val").textContent = year_val + "년  " + month_val + "월"
+
+            next.onclick = () => {
+                document.querySelector(".ui-datepicker-next.ui-corner-all").click();
+                document.getElementById("datepicker_row").innerHTML = ''
+                draw_datepicker()
+            }
+            prev.onclick = () => {
+                document.querySelector(".ui-datepicker-prev.ui-corner-all").click();
+                document.getElementById("datepicker_row").innerHTML = ''
+                draw_datepicker()
+            }
+        }
+
+        let li_click = () => {
+            let ul = document.querySelectorAll(".ticketing ul")
+
+            for (let u of ul) {
+                u.addEventListener("click", function (e) {
+                    if (e.target.tagName === 'LI' || e.target.closest("LI")) {
+                        let tag;
+                        if (e.target.tagName !== "LI") {
+                            tag = e.target.closest("LI")
+                        } else {
+                            tag = e.target
+                        }
+                        let bro = document.getElementsByClassName(tag.classList[0])
+                        for (let b of bro) {
+                            b.classList.remove('active')
+                        }
+                        tag.classList.add('active')
+                    }
+                })
+            }
+        }
+
+        $(document).ready(function () {
+            datepicker();
+            li_click();
+
+        });
+    </script>
+</th:block>
+</html>

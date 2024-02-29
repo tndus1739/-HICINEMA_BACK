@@ -1,0 +1,16 @@
+.preloader {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: none;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.team-color {
+    background-color: #ff78c5b7;
+}
+
+#after {
+    display: none;
+}

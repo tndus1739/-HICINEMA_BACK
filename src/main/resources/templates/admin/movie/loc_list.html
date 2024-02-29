@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout_admin}">
+
+<th:block layout:fragment="css">
+
+</th:block>
+
+<div class="container-scroller">
+
+    <div class="container-fluid page-body-wrapper">
+
+        <div class="main-panel">
+            <div layout:fragment="content"  class="content-wrapper">
+                <div class="page-header">
+                    <h3 class="page-title">
+                        지역
+                    </h3>
+                    <!--            <nav aria-label="breadcrumb">-->
+                    <!--              <ol class="breadcrumb">-->
+                    <!--                <li class="breadcrumb-item"><a href="#"></a></li>-->
+                    <!--                <li class="breadcrumb-item active" aria-current="page">Basic tables</li>-->
+                    <!--              </ol>-->
+                    <!--            </nav>-->
+                </div>
+                <div class="row">
+                    <div class="col-lg-9 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <button class="btn btn-gradient-dark btn-fw" type="button" style="float: right"
+                                        onclick="add_loc()">+
+                                </button>
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>지역명</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="loc_list">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Photoshop</td>
+                                        <td>
+                                            <button type="button"
+                                                    class="btn btn-outline-secondary btn-rounded btn-icon text-danger">x
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<th:block layout:fragment="script">
+<script>
+    let add_loc = () => {
+        let html = "";
+
+        if (!document.getElementById("add_loc")) {
+            html = "<tr id='add_loc'>" +
+                "<td>1</td>" +
+                "<td><input type='text' class='form-control' id='' name=''></td>" +
+                "<td>" +
+                "<button type='button' class='btn btn-outline-secondary btn-rounded btn-icon' onclick='remove_loc()'><i class='mdi mdi-playlist-remove text-danger'></i></button>" +
+                "<button type='button' class='btn btn-outline-secondary btn-rounded btn-icon' onclick='save_loc()'><i class='mdi mdi-playlist-check text-info'></i></button>" +
+                "</td>" +
+                "</tr>"
+        }
+        document.getElementById("loc_list").innerHTML += html
+    }
+
+    let remove_loc = (id) => {
+        if(!id) {
+            document.getElementById('add_loc').remove()
+        } else {
+
+        }
+    }
+
+    let save_loc = () => {
+
+    }
+
+</script>
+</th:block>
+</body>
+
+</html>

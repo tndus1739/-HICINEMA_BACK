@@ -1,0 +1,190 @@
+.movie-list-info {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.shopping-cart .ticketing span {
+    padding-left: 5%;
+}
+
+.shopping-cart .ticketing {
+    float: left;
+}
+
+.theater-select, .theater-location {
+    float: left;
+    width: 50%;
+}
+
+.theater-location ul li.loc:hover, .theater-select ul li.theaters:hover {
+    border: 5px solid darkred;
+    font-size: 18px;
+}
+
+.theater-location ul li.loc.active, .theater-select ul li.theaters.active {
+    border: 5px solid darkred;
+    font-size: 18px;
+}
+
+.theater-location ul li.loc, .theater-select ul li.theaters {
+    padding: 3% 0 3% 0;
+    border-radius: 5%;
+    font-size: 13px;
+}
+
+.movie-select ul li.movies {
+    padding: 5% 0 5% 0;
+    font-size: 15px;
+}
+
+.movie-select ul li.movies:hover, .movie-select ul li.movies.active {
+    border: 5px solid darkred;
+    font-size: 21px;
+}
+
+.ticketing-header {
+    padding-bottom: 1%;
+}
+
+.ticketing-header .ticketing-title {
+    text-align: center;
+    background: #333;
+    border-radius: 5%;
+    color: white;
+    border: 2px solid white;
+}
+
+.ticketing li {
+    cursor: pointer;
+}
+
+/* datepicker start */
+
+.ui-datepicker-inline {
+    display: none !important;
+}
+
+.ui-datepicker-today {
+    border-left: 1px solid rgba(0, 0, 0, 0.24);
+    border-right: 1px solid rgba(0, 0, 0, 0.24);
+}
+
+#datepicker_row {
+    white-space: nowrap; /* 공백 처리 방지 */
+    overflow-x: auto; /* 수평 스크롤 표시 */
+    overflow-y: hidden; /* 세로 스크롤 숨김 */
+    width: 100%; /* 가로 너비 설정 */
+    text-align: center;
+}
+
+.ui-datepicker-week-end.highlighted p {
+    color: red !important;
+}
+
+#datepicker_row div {
+    padding: 1%;
+    display: inline-block; /* 자식 div를 인라인 블록 요소로 표시 */
+}
+
+.ui-state-disabled {
+    display: none !important;
+}
+
+div.year-month {
+    width: 100%;
+    text-align: center;
+}
+
+#datepicker_row div {
+    cursor: pointer;
+}
+
+.ui-datepicker-today {
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    font-size: 15px;
+}
+
+#datepicker_row div:hover, #datepicker_row div.active {
+    border-left: 2px solid darkred;
+    border-right: 2px solid darkred;
+    font-size: 15px;
+}
+
+#datepicker_row div:hover, #datepicker_row div.active {
+    background-color: #e7e7e7;
+}
+
+#datepicker_row #prev, #datepicker_row #next {
+    background: #f6f6f6;
+    border: 0;
+}
+
+/* datepicker end */
+
+/* 상영시간 start */
+.reservations {
+    border-top: 1px solid black;
+}
+
+.reservations li {
+    padding: 2% 0 2% 0;
+    border-bottom: 1px solid gray;
+}
+
+.reservations li:hover , .reservations li.active{
+    font-size: 16px;
+    background-color: #d0d0d0;
+}
+
+.reservations li:hover .movie-title , .reservations li.active .movie-title {
+    font-size: 23px;
+}
+
+.screen-info .screen-time {
+    padding-right: 3%;
+}
+
+.screen-info .movie-content span {
+    padding: 0;
+    margin: 0;
+}
+
+.screen-info .screen-time, .screen-info .movie-content {
+    float: left;
+}
+
+.screen-details {
+    float: right;
+}
+
+.screen-info .screen-movie, .screen-info .screen-time, .screen-info .screen-movie > div {
+    height: 72px;
+}
+
+.screen-info .movie-title, .screen-info .movie-detail-info, .screen-info .screen-detail, .screen-info .screen-seat{
+    height: 50%;
+}
+
+.screen-info .screen-seat {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+
+.screen-info .movie-detail-info {
+    display: flex;
+    flex-direction: initial;
+    align-items: flex-end;
+}
+
+.screen-info {
+    margin: 0 2% 0 2%;
+}
+.movie-title {
+    font-size: 18px;
+}
+/* 상영시간 end */
+

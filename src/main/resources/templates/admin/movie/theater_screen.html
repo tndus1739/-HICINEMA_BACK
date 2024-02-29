@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout_admin}">
+
+<th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{/admin/css/theater_screen.css}">
+</th:block>
+
+<div class="container-scroller">
+
+    <div class="container-fluid page-body-wrapper">
+
+        <div class="main-panel">
+            <div layout:fragment="content" class="content-wrapper">
+                <div class="page-header">
+
+                </div>
+                <div class="row">
+                    <div class="col-12 grid-margin">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">수유 > 상영관</h4>
+                                <form class="form-sample">
+                                    <p class="card-description">
+                                        1관
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">영화관 명</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" readonly value="수유">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">좌석</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" readonly value="96석">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">스케줄</label>
+                                                <div class="col-sm-9">
+                                                    <div class="col-lg-12">
+                                                        <div class="d-none" id="datepicker"></div>
+                                                        <div class="year-month">
+                                                            <div id="year_val"></div>
+                                                        </div>
+                                                        <div id="datepicker_row"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-sm-3 col-form-label"></label>
+                                        <div class="col-sm-9">
+                                            <div class="col-lg-12 grid-margin stretch-card">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title text-center">상영스케줄</h4>
+                                                        <button type="button" class="btn btn-gradient-info float-right"
+                                                                onclick="add_schedule()">+
+                                                        </button>
+                                                        <input type="hidden" name="" id="sel_day">
+                                                        <p id="sel_day1" class="d-none"></p>
+                                                        <table class="table table-hover">
+                                                            <thead>
+                                                            <tr>
+                                                                <th>상영일</th>
+                                                                <th>영화명</th>
+                                                                <th>상영시간</th>
+                                                                <th>잔여좌석</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody id="schedule_list">
+                                                            <tr>
+                                                                <td>2024.02.21</td>
+                                                                <td class="text-primary">
+                                                                    웡카
+                                                                </td>
+                                                                <td>09:00 ~ 10:35</td>
+                                                                <td>
+                                                                    35/96
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2024.02.21</td>
+                                                                <td class="text-primary">
+                                                                    웡카
+                                                                </td>
+                                                                <td>11:00 ~ 12:35</td>
+                                                                <td>
+                                                                    35/96
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="4" class="text-center">등록된 스케줄이 없습니다.</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-gradient-primary mr-2" style="float: right">
+                                        저장
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<th:block layout:fragment="script">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        let datepicker = async () => {
+            $("#datepicker").datepicker({
+                showOtherMonths: true,
+                minDate: 0,
+                monthNames: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"], // 숫자로 된 월 이름 배열
+                // 다른 옵션들...
+                beforeShowDay: function (date) {
+                    // Check if the date is Sunday (0)
+                    if (date.getDay() === 0) {
+                        // Apply highlighted class to Sundays
+                        return [true, "highlighted", ""];
+                    }
+                    // Otherwise, return as is
+                    return [true, "", ""];
+                }
+            });
+            await sel_today();
+            await draw_datepicker();
+        }
+
+        let draw_datepicker = async () => {
+            let date = document.querySelectorAll(".ui-datepicker-calendar tbody td");
+            let d = [];
+            let next = document.createElement("button")
+            let prev = document.createElement("button")
+            next.textContent = '▶'
+            next.id = 'next'
+            prev.textContent = '◀'
+            prev.id = 'prev'
+            let years = document.querySelector(".ui-datepicker-year").textContent;
+            let months = document.querySelector(".ui-datepicker-month").textContent;
+            document.getElementById("datepicker_row").append(prev)
+            for (let k of date) {
+                let a = k.children[0];
+                let obj = {};
+                obj['tag'] = a.tagName;
+                obj['date'] = a.textContent;
+                obj['class'] = Array.from(k.classList);
+                let tag1 = document.createElement("div")
+                for (let c of obj['class']) {
+                    tag1.classList.add(c)
+                }
+                // tag1.style.float = "left";
+
+                let dt = years + "-" + months + "-" + a.textContent;
+                let dw = new Date(dt).getDay()
+                let arr_dw = ["일", "월", "화", "수", "목", "금", "토", "일"]
+
+                tag1.innerHTML = "<strong><p>" + a.textContent + "</p><p>" + arr_dw[dw] + "</p></strong>";
+                document.getElementById("datepicker_row").append(tag1)
+                tag1.onclick = () => {
+                    select(tag1);
+                }
+                // document.getElementById("datepicker_row").append(tag1)
+                d.push(obj);
+            }
+            document.getElementById("datepicker_row").append(next)
+            // if (document.getElementById("prev")) {
+            //     if (Number(months) === new Date().getMonth() + 1) {
+            //         document.getElementById("prev").style.display = 'none';
+            //     }
+            // }
+            let month_val = months;
+            let year_val = years;
+            if (months.indexOf("0") === 0) {
+                month_val = months.replace("0", "")
+            }
+            // document.getElementById("month_val").textContent = month_val + " 월"
+            document.getElementById("year_val").textContent = year_val + "년  " + month_val + "월"
+
+            next.onclick = () => {
+                document.querySelector(".ui-datepicker-next.ui-corner-all").click();
+                document.getElementById("datepicker_row").innerHTML = ''
+                draw_datepicker()
+            }
+            prev.onclick = () => {
+                document.querySelector(".ui-datepicker-prev.ui-corner-all").click();
+                document.getElementById("datepicker_row").innerHTML = ''
+                draw_datepicker()
+            }
+
+            await sel_day();
+        }
+
+        let select = async (tag) => {
+            let row = document.querySelectorAll("#datepicker_row > div")
+            for (let r of row) {
+                r.classList.remove("active")
+            }
+            tag.classList.add("active")
+            await sel_day();
+        }
+
+        let sel_today = () => {
+            let today = document.querySelector(".ui-datepicker-today")
+            today.classList.add("active")
+        }
+
+        let sel_day = () => {
+            let years = document.querySelector(".ui-datepicker-year").textContent;
+            let months = document.querySelector(".ui-datepicker-month").textContent;
+            let sel_day = document.getElementById("sel_day1")
+            let month_val = months;
+            let year_val = years;
+            if (months.indexOf("0") === 0) {
+                month_val = months.replace("0", "")
+            }
+            sel_day.value = year_val + "." + month_val + "." + document.querySelector("#datepicker_row > div.active p:nth-child(1)").textContent;
+            document.getElementById("sel_day1").textContent = year_val + "." + month_val + "." + document.querySelector("#datepicker_row > div.active p:nth-child(1)").textContent;
+            schedule();
+        }
+
+        let add_schedule = async () => {
+            let select_date = document.querySelector("#datepicker_row > div.active");
+            if (select_date.classList.contains("ui-state-disabled")) {
+                return;
+            }
+
+            if (document.getElementById("add_schedule_input")) {
+                return
+            }
+
+            let table = document.getElementById("schedule_list");
+            let tr = document.createElement("tr");
+            tr.id = "add_schedule_input"
+            let td1 = document.createElement("td");
+            let td2 = document.createElement("td");
+            let td3 = document.createElement("td");
+            let td4 = document.createElement("td");
+
+            let td2_sel = document.createElement("select");
+            td2_sel.innerHTML = await movie_list();
+            td2_sel.id = "movie-info"
+            td2_sel.onchange = () => {
+                if (document.getElementById("startTime").value) {
+                    startTimeSet();
+                }
+            }
+
+            td1.textContent = document.getElementById("sel_day1").textContent;
+            td2.append(td2_sel);
+            td3.innerHTML = "<input type='time' onchange='startTimeSet(this)' id='startTime'> ~ <input type='time' readonly id='endTime'>";
+            td4.textContent = "0/96"
+
+            tr.append(td1)
+            tr.append(td2)
+            tr.append(td3)
+            tr.append(td4)
+            table.append(tr)
+        }
+
+        let schedule = () => {
+            let html = "";
+
+
+            html = '<tr>' +
+                ' <td>2024.02.21</td>' +
+                ' <td class="text-primary">' +
+                '웡카' +
+                '</td>' +
+                ' <td>09:00 ~ 10:35</td>' +
+                ' <td>' +
+                '35/96' +
+                '</td>' +
+                '</tr>' +
+                ' <tr>' +
+                ' <td>2024.02.21</td>' +
+                ' <td class="text-primary">' +
+                '웡카' +
+                '</td>' +
+                ' <td>11:00 ~ 12:35</td>' +
+                ' <td>' +
+                '35/96' +
+                '</td>' +
+                '</tr>';
+
+            document.getElementById("schedule_list").innerHTML = html;
+            console.log("aa")
+        }
+
+        let movie_list = () => {
+            let html = "";
+
+            //임시
+            html = "<option data-running-time='132'>파묘</option>" +
+                "<option data-running-time='161'>듄2</option>" +
+                "<option data-running-time='116'>웡카</option>" +
+                "<option data-running-time='104'>소풍</option>" +
+                "<option data-running-time='151'>시민덕희</option>";
+            return html;
+        }
+
+        let startTimeSet = () => {
+            let time = document.getElementById("startTime").value;
+            let select_movie = document.getElementById("movie-info");
+            let movie = select_movie.options[select_movie.selectedIndex];
+            let runningTime = parseInt(movie.dataset.runningTime); // dataset 속성은 문자열로 반환되므로 숫자로 변환해야 합니다.
+            let endTime = document.getElementById("endTime");
+
+            // 시작 시간을 분 단위로 변환
+            let startTimeMinutes = parseInt(time.split(":")[0]) * 60 + parseInt(time.split(":")[1]);
+
+            // 종료 시간을 분 단위로 계산하여 endTime에 할당
+            let endTimeMinutes = startTimeMinutes + runningTime;
+            let endTimeHours = Math.floor(endTimeMinutes / 60);
+            let endTimeMinutesRemainder = endTimeMinutes % 60;
+
+            // console.log(`${endTimeHours < 10 ? '0' : ''}${endTimeHours}:${endTimeMinutesRemainder < 10 ? '0' : ''}${endTimeMinutesRemainder}`)
+            // endTime 요소의 값을 변경
+            endTime.value = `${endTimeHours < 10 ? '0' : ''}${endTimeHours}:${endTimeMinutesRemainder < 10 ? '0' : ''}${endTimeMinutesRemainder}`;
+
+        }
+
+        window.onload = () => {
+            datepicker();
+        }
+    </script>
+</th:block>
+</body>
+</html>

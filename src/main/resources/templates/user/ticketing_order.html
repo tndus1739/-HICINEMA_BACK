@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout_user1}">
+
+<th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{/css/ticketing_order.css}">
+</th:block>
+
+<div layout:fragment="content">
+<!-- Shopping Cart -->
+<div class="shopping-cart section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-lg-7 ticketing">
+                        <div class="ticketing-header">
+                            <div class="ticketing-title">
+                                예매정보
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <img src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                         alt="" srcset="">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="movie-title">
+                                        <span class="gr_all"></span>
+                                        <span>영화제목</span>
+                                    </div>
+                                    <div class="movie-detail-info">
+                                        <div class="row">
+                                            <span>일시 : </span>
+                                            <div class="col-lg-9">
+                                                2024-02-19 (월) 22:30 ~ 24:36
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <span>영화관 : </span>
+                                            <div class="col-lg-9">
+                                                수유 4관 (Laser) - 2D
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <span>인원 : </span>
+                                            <div class="col-lg-9">
+                                                성인1
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <span>좌석 : </span>
+                                            <div class="col-lg-9">
+                                                C7
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 ticketing">
+                        <div class="ticketing-header">
+                            <div class="ticketing-title">
+                                결제수단
+                            </div>
+                        </div>
+                        <div class="payment-icon">
+                            <div class="row pay-icon">
+                                <div class="payment-radio">
+                                    <input type="radio" name="" id="" checked>
+                                </div>
+                                <div class="p-icon">
+                                    <img th:src="@{/images/payment_icon_yellow_medium.png}" alt="" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ticketing">
+                        <div class="ticketing-header">
+                            <div class="ticketing-title">
+                                결제하기
+                            </div>
+                        </div>
+                        <div>
+                            <div class="payment-info">
+                                <span>결제금액 &nbsp&nbsp:</span>
+                                <span>15000 원</span>
+                            </div>
+                        </div>
+                        <div class="payment-btn">
+                            <button type="button" class="btn">결제</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ End Shopping Cart -->
+</div>
+
+<th:block layout:fragment="script">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</th:block>
+</html>

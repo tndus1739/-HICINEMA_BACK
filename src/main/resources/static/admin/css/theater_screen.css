@@ -1,0 +1,67 @@
+.ui-datepicker-inline {
+    display: none !important;
+}
+
+.ui-datepicker-today {
+    border-left: 1px solid rgba(0, 0, 0, 0.24);
+    border-right: 1px solid rgba(0, 0, 0, 0.24);
+}
+
+#datepicker_row {
+    white-space: nowrap; /* 공백 처리 방지 */
+    overflow-x: auto; /* 수평 스크롤 표시 */
+    overflow-y: hidden; /* 세로 스크롤 숨김 */
+    width: 100%; /* 가로 너비 설정 */
+    text-align: center;
+}
+
+.ui-datepicker-week-end.highlighted p {
+    color: red !important;
+}
+
+#datepicker_row div {
+    padding: 1%;
+    display: inline-block; /* 자식 div를 인라인 블록 요소로 표시 */
+}
+
+/*.ui-state-disabled {*/
+/*    display: none !important;*/
+/*}*/
+
+div.year-month {
+    width: 100%;
+    text-align: center;
+}
+
+#datepicker_row div {
+    cursor: pointer;
+}
+
+.ui-datepicker-today {
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    font-size: 15px;
+}
+
+#datepicker_row div:hover, #datepicker_row div.active {
+    border-left: 2px solid darkred;
+    border-right: 2px solid darkred;
+    font-size: 15px;
+}
+
+#datepicker_row div:hover, #datepicker_row div.active {
+    background-color: #e7e7e7;
+}
+
+#datepicker_row #prev, #datepicker_row #next {
+    background: #f6f6f6;
+    border: 0;
+}
+
+div.year-month {
+    width: 100%;
+    text-align: center;
+}
+#datepicker_row .ui-state-disabled {
+    opacity: 0.5;
+}

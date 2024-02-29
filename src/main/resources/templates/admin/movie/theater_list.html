@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout_admin}">
+
+<th:block layout:fragment="css">
+
+</th:block>
+
+<div class="container-scroller">
+
+    <div class="container-fluid page-body-wrapper">
+
+        <div class="main-panel">
+            <div layout:fragment="content" class="content-wrapper">
+                <div class="page-header">
+                    <h3 class="page-title">
+                        영화관
+                    </h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Basic tables</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <h4 class="card-title">영화관 목록</h4>
+                                        <p class="card-description">
+                                            <code>전체</code>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="/admin/movie/theater_form" class="btn btn-gradient-primary mr-2"
+                                           style="float: right">영화관 추가</a>
+                                    </div>
+                                </div>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlSelect3">지역</label>
+                                                <select class="form-control form-control-sm"
+                                                        id="exampleFormControlSelect3">
+                                                    <option>전체</option>
+                                                    <option>서울</option>
+                                                    <option>인천/경기</option>
+                                                    <option>충천/대전</option>
+                                                    <option>강원</option>
+                                                    <option>제주</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="exampleInputUsername1">영화관 명</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1"
+                                                       placeholder="Username">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2" style="align-self: center;">
+                                            <button type="submit" class="btn btn-gradient-primary mb-2">검색</button>
+                                        </div>
+                                        <div class="col-lg-2" style="align-self: center;text-align: right">
+                                            <button type="submit" class="btn btn-gradient-danger mb-2">삭제</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th width="5%">
+                                            <input type="checkbox" class="all_check">
+                                        </th>
+                                        <th width="10%">No</th>
+                                        <th width="10%">지역</th>
+                                        <th width="25%">영화관</th>
+                                        <th width="30%">주소</th>
+                                        <th width="10%">총 상영관수</th>
+                                        <th width="10%">총 좌석수</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td>1</td>
+                                        <td>서울</td>
+                                        <td class="text-primary"><a href="/admin/movie/theater_detail">수유</a></td>
+                                        <td>서울 강북구 도봉로 308 (번동)</td>
+                                        <td>6개관</td>
+                                        <td>852석</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td>1</td>
+                                        <td>서울</td>
+                                        <td class="text-primary"><a href="/admin/movie/theater_detail">수유</a></td>
+                                        <td>서울 강북구 도봉로 308 (번동)</td>
+                                        <td>6개관</td>
+                                        <td>852석</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td>1</td>
+                                        <td>서울</td>
+                                        <td class="text-primary"><a href="/admin/movie/theater_detail">수유</a></td>
+                                        <td>서울 강북구 도봉로 308 (번동)</td>
+                                        <td>6개관</td>
+                                        <td>852석</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td>1</td>
+                                        <td>서울</td>
+                                        <td class="text-primary"><a href="/admin/movie/theater_detail">수유</a></td>
+                                        <td>서울 강북구 도봉로 308 (번동)</td>
+                                        <td>6개관</td>
+                                        <td>852석</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="pagination-area" style="text-align: center">
+                                    <ul class="pagination" style="display: inline-flex; padding-top: 5%">
+                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<th:block layout:fragment="script">
+
+</th:block>
+
+</body>
+</html>

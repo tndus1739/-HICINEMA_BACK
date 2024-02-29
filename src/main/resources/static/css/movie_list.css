@@ -1,0 +1,106 @@
+.button-head {
+    text-align: center;
+    /*background-color: rgba(0, 0, 0, 0.7) !important;*/
+}
+
+.single-product .product-img .list-prod.overlay:before {
+    /*background-color: rgba(0, 0, 0, 0) !important;*/
+    background-color: black;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+@media (hover: hover) {
+    .single-product .product-img .list-prod.overlay:hover:before {
+        background-color: black !important;
+        opacity: 0.7;
+        visibility: visible;
+    }
+}
+
+.list-prod.overlay div {
+    /*border: 1px solid white;*/
+    width: 80%;
+    color: white;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    margin-left: -40%;
+    margin-top: -20px;
+    text-align: center;
+}
+
+.list-prod.overlay div a {
+    width: 100%;
+    border: 1px solid white;
+    margin-bottom: 20%;
+    display: none;
+    -webkit-transition: none !important;
+    transition: none !important;
+    border-radius: 5px;
+}
+
+@media (hover: hover) {
+    .list-prod.overlay:hover a {
+        display: inline-block;
+    }
+}
+
+.single-product .product-img {
+    cursor: default !important;
+    border-radius: 5px
+}
+
+.product-action {
+    position: relative !important;
+}
+
+.nav-tabs {
+    width: auto !important;
+    text-align: center !important;
+}
+
+.product-content{
+    text-align: center;
+}
+
+.shop-top {
+    text-align: left;
+    padding: 18px 20px 18px 20px !important;
+}
+
+@media (hover: hover) {
+    .sort-sel {
+        float: right;
+        width: 30%;
+        text-align: right;
+    }
+}
+
+/*.sort-sel {*/
+/*    display: none;*/
+/*}*/
+
+.sort-sel span {
+    cursor: pointer;
+}
+.sort-sel span:nth-child(2) {
+    padding-left: 3%;
+}
+.sort-sel span:nth-child(3) {
+    margin-left: 3%;
+}
+.sort-sel span:hover {
+    text-decoration: underline;
+}
+
+.movie-list-info {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

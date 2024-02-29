@@ -1,0 +1,2436 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Meta Tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='copyright' content=''>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Title Tag  -->
+    <title>Eshop - eCommerce HTML5 Template.</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" th:href="@{/images/favicon.png}">
+    <!-- Web Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+          rel="stylesheet">
+
+    <!-- StyleSheet -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" th:href="@{/css/magnific-popup.min.css}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{/css/font-awesome.css}">
+    <!-- Fancybox -->
+    <link rel="stylesheet" th:href="@{/css/jquery.fancybox.min.css}">
+    <!-- Themify Icons -->
+    <link rel="stylesheet" th:href="@{/css/themify-icons.css}">
+    <!-- Jquery Ui -->
+    <link rel="stylesheet" th:href="@{/css/jquery-ui.css}">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" th:href="@{/css/niceselect.css}">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" th:href="@{/css/animate.css}">
+    <!-- Flex Slider CSS -->
+    <link rel="stylesheet" th:href="@{/css/flex-slider.min.css}">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" th:href="@{/css/owl-carousel.css}">
+    <!-- Slicknav -->
+    <link rel="stylesheet" th:href="@{/css/slicknav.min.css}">
+
+    <!-- Eshop StyleSheet -->
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <link rel="stylesheet" th:href="@{/css/responsive.css}">
+
+    <!-- Color CSS -->
+    <link rel="stylesheet" th:href="@{/css/color/color1.css}">
+    <!--<link rel="stylesheet" href="css/color/color2.css">-->
+    <!--<link rel="stylesheet" href="css/color/color3.css">-->
+    <!--<link rel="stylesheet" href="css/color/color4.css">-->
+    <!--<link rel="stylesheet" href="css/color/color5.css">-->
+    <!--<link rel="stylesheet" href="css/color/color6.css">-->
+    <!--<link rel="stylesheet" href="css/color/color7.css">-->
+    <!--<link rel="stylesheet" href="css/color/color8.css">-->
+    <!--<link rel="stylesheet" href="css/color/color9.css">-->
+    <!--<link rel="stylesheet" href="css/color/color10.css">-->
+    <!--<link rel="stylesheet" href="css/color/color11.css">-->
+    <!--<link rel="stylesheet" href="css/color/color12.css">-->
+
+    <link rel="stylesheet" href="#" id="colors">
+    <link rel="stylesheet" th:href="@{/css/custom.css}">
+    <style>
+        .button-head {
+            text-align: center;
+            /*background-color: rgba(0, 0, 0, 0.7) !important;*/
+        }
+
+        .single-product .product-img .list-prod.overlay:before {
+            /*background-color: rgba(0, 0, 0, 0) !important;*/
+            background-color: black;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: all 0.4s ease;
+            -moz-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+        }
+
+        .single-product .product-img .list-prod.overlay:hover:before {
+            background-color: black !important;
+            opacity: 0.7;
+            visibility: visible;
+        }
+
+        .list-prod.overlay div {
+            /*border: 1px solid white;*/
+            width: 80%;
+            color: white;
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            margin-left: -40%;
+            margin-top: -20px;
+            text-align: center;
+        }
+
+        .list-prod.overlay div a {
+            width: 100%;
+            border: 1px solid white;
+            margin-bottom: 20%;
+            display: none;
+            -webkit-transition: none !important;
+            transition: none !important;
+            border-radius: 5px;
+        }
+
+        .list-prod.overlay:hover a {
+            display: inline-block;
+        }
+
+        .single-product .product-img {
+            cursor: default !important;
+            border-radius: 5px
+        }
+
+        .product-action {
+            position: relative !important;
+        }
+
+        .nav-tabs {
+            width: auto !important;
+            text-align: center !important;
+        }
+
+        .product-content{
+            text-align: center;
+        }
+
+        .shop-top {
+            text-align: left;
+            padding: 18px 20px 18px 20px !important;
+        }
+
+        .sort-sel {
+            float: right;
+            width: 30%;
+            text-align: right;
+        }
+
+        .sort-sel span {
+            cursor: pointer;
+        }
+        .sort-sel span:nth-child(2) {
+            padding-left: 3%;
+        }
+        .sort-sel span:nth-child(3) {
+            margin-left: 3%;
+        }
+        .sort-sel span:hover {
+            text-decoration: underline;
+        }
+
+        .gr_all {
+            background: green url("https://www.lottecinema.co.kr/NLCHS/Content/images/common/grade_all.png") 0 0 no-repeat;
+            background-size: 100%;
+            content: "";
+            width: 22px;
+            height: 22px;
+            border-radius: 3px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .gr_12 {
+            background: #e9b630 url("https://www.lottecinema.co.kr/NLCHS/Content/images/common/grade_12.png") 0 0 no-repeat;
+            background-size: 100%;
+            content: "12";
+            width: 22px;
+            height: 22px;
+            border-radius: 3px;
+            display: inline-block;
+            vertical-align: middle;
+            font-family: "Roboto",serif;
+        }
+
+        .gr_15 {
+            background: #dd7430 url("https://www.lottecinema.co.kr/NLCHS/Content/images/common/grade_15.png") 0 0 no-repeat;
+            background-size: 100%;
+            content: "12";
+            width: 22px;
+            height: 22px;
+            border-radius: 3px;
+            display: inline-block;
+            vertical-align: middle;
+            font-family: "Roboto",serif;
+        }
+
+        .gr_18 {
+            background: #d92b36 url("https://www.lottecinema.co.kr/NLCHS/Content/images/common/grade_18.png") 0 0 no-repeat;
+            background-size: 100%;
+            content: "12";
+            width: 22px;
+            height: 22px;
+            border-radius: 3px;
+            display: inline-block;
+            vertical-align: middle;
+            font-family: "Roboto",serif;
+        }
+
+        .gr_none {
+            background: #484848 url("https://www.lottecinema.co.kr/NLCHS/Content/images/common/grade_non.png") 0 0 no-repeat;
+            background-size: 100%;
+            content: "12";
+            width: 22px;
+            height: 22px;
+            border-radius: 3px;
+            display: inline-block;
+            vertical-align: middle;
+            font-family: "Roboto",serif;
+        }
+
+        .movie-list-info {
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    </style>
+
+</head>
+<body class="js">
+
+<!-- Preloader -->
+<div class="preloader">
+    <div class="preloader-inner">
+        <div class="preloader-icon">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+<!-- End Preloader -->
+
+<!-- Eshop Color Plate -->
+<div class="color-plate ">
+    <a class="color-plate-icon"><i class="ti-paint-bucket"></i></a>
+    <h4>Eshop Colors</h4>
+    <p>Here is some awesome color's available on Eshop Template.</p>
+    <span class="color1"></span>
+    <span class="color2"></span>
+    <span class="color3"></span>
+    <span class="color4"></span>
+    <span class="color5"></span>
+    <span class="color6"></span>
+    <span class="color7"></span>
+    <span class="color8"></span>
+    <span class="color9"></span>
+    <span class="color10"></span>
+    <span class="color11"></span>
+    <span class="color12"></span>
+</div>
+<!-- /End Color Plate -->
+
+<!-- Header -->
+<header class="header shop">
+    <!-- Topbar -->
+
+</header>
+<!--/ End Header -->
+
+<!-- Product Style -->
+<section class="product-area shop-sidebar shop section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="product-info">
+                            <div class="list-top">
+                                <div class="shop-top nav-main">
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item"><a class="nav-link active" data-toggle="tab"
+                                                                href="#screening"
+                                                                role="tab">현재 상영작</a></li>
+                                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#scheduled"
+                                                                role="tab">미개봉</a></li>
+                                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#not_screen"
+                                                                role="tab">미상영</a></li>
+                                    </ul>
+                                    <div class="sort-sel">
+                                        <span>예매순</span>
+                                        <span>좋아요순</span>
+                                        <span>관람평순</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="screening" role="tabpanel">
+                                    <div class="tab-single">
+                                        <div class="row">
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_15"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_12"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_18"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_none"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="scheduled" role="tabpanel">
+                                    <div class="tab-single">
+                                        <div class="row">
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20767_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="not_screen" role="tabpanel">
+                                    <div class="tab-single">
+                                        <div class="row">
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-6 col-12">
+                                                <div class="single-product">
+                                                    <div class="product-img">
+                                                        <div class="list-prod overlay">
+                                                            <img class="default-img"
+                                                                 src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_103_1.jpg"
+                                                                 alt="#">
+                                                            <div>
+                                                                <a href="movie_details.html">
+                                                                    상세보기
+                                                                </a>
+                                                                <a href="movie_details.html">
+                                                                    예매하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <strong class="movie-list-info">
+                                                            <span class="gr_all"></span>
+                                                            <span>웡카</span>
+                                                        </strong>
+                                                        <div class="product-price">
+                                                            <span>100분</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!--/ End Product Style 1  -->
+
+<!-- Start Footer Area -->
+<footer class="footer">
+
+</footer>
+<!-- /End Footer Area -->
+
+
+<!-- Jquery -->
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/jquery-migrate-3.0.0.js}"></script>
+<script th:src="@{/js/jquery-ui.min.js}"></script>
+<!-- Popper JS -->
+<script th:src="@{/js/popper.min.js}"></script>
+<!-- Bootstrap JS -->
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<!-- Color JS -->
+<script th:src="@{/js/colors.js}"></script>
+<!-- Slicknav JS -->
+<script th:src="@{/js/slicknav.min.js}"></script>
+<!-- Owl Carousel JS -->
+<script th:src="@{/js/owl-carousel.js}"></script>
+<!-- Magnific Popup JS -->
+<script th:src="@{/js/magnific-popup.js}"></script>
+<!-- Fancybox JS -->
+<script th:src="@{/js/facnybox.min.js}"></script>
+<!-- Waypoints JS -->
+<script th:src="@{/js/waypoints.min.js}"></script>
+<!-- Countdown JS -->
+<script th:src="@{/js/finalcountdown.min.js}"></script>
+<!-- Nice Select JS -->
+<script th:src="@{/js/nicesellect.js}"></script>
+<!-- Ytplayer JS -->
+<script th:src="@{/js/ytplayer.min.js}"></script>
+<!-- Flex Slider JS -->
+<script th:src="@{/js/flex-slider.js}"></script>
+<!-- ScrollUp JS -->
+<script th:src="@{/js/scrollup.js}"></script>
+<!-- Onepage Nav JS -->
+<script th:src="@{/js/onepage-nav.min.js}"></script>
+<!-- Easing JS -->
+<script th:src="@{/js/easing.js}"></script>
+<!-- Active JS -->
+<script th:src="@{/js/active.js}"></script>
+
+</body>
+</html>

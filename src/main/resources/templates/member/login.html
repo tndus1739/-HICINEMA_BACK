@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout_user2}">
+<th:block layout:fragment="css">
+<link rel="stylesheet" th:href="@{/css/color/color1_knk.css}">
+<link rel="stylesheet" th:href="@{/css/style_knk.css}">
+<link rel="stylesheet" th:href="@{/css/owl-carousel_knk.css}">
+<link rel="stylesheet" th:href="@{/css/reset_knk.css}">
+
+
+
+
+ <style>
+   .alert_red {
+    color: #df0505;
+    padding-left: 15px;
+    /* width: 97%; */
+   /*  BACKGROUND-COLOR: #ffc0c073;
+    BORDER-RADIUS: 3PX;
+    BORDER: SOLID 1PX #ff000045; */
+    MARGIN: 0 AUTO;
+    MARGIN-BOTTOM: 25PX;
+}
+ 
+ .shop.login {
+    padding: 220px 0 150px 0 !important;
+    }
+   
+   
+</style> 
+</th:block>
+
+
+<div layout:fragment="content">
+
+    <!-- Shop Login -->
+    <section class="shop login section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 col-12">
+                    <div class="login-form">
+                        <h3><b>로그인</b></h3>
+                        <!-- Form -->
+                        <form class="form" th:action="@{/member/login}"  method="post" >
+                       		 <div th:if="${param.error}">
+           					 	 <div class="alert_red">
+               						 ID 또는 비밀번호를 확인해 주세요.
+            					 </div>
+        					</div> 
+                               <div class="row">
+                                  <div class="input-box">
+                                      <div class="col-12">
+                                          <div class="form-group">
+                                            <input type="text" name="memberId"  id="memberId" placeholder="아이디" required="required">
+                                          </div>
+                                       </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input type="password" name="password" id ="password" placeholder="비밀번호"
+                                                required="required">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group login-btn">
+                                    <button class="btn" type="submit">로그인</button>
+                                </div>
+                                <div class="col-12">
+                                    <a th:href="@{/member/register}" class="sign-up">회원가입</a> |
+                                    <a href="#" class="lost-id">아이디 찾기</a>|
+                                    <a href="#" class="lost-pass">비밀번호 찾기</a>
+                                </div>
+                            </div>
+                        </form>
+                        <!--/ End Form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Login -->
+
+</div>
+
+   
+
+</html>

@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Meta Tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='copyright' content=''>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Title Tag  -->
+    <title>메인 페이지</title>
+    <!-- StyleSheet -->
+    <!-- 공통css -->
+    <div th:replace="user_test/common/commonCss.html"></div>
+    <!-- Eshop StyleSheet -->
+    <link rel="stylesheet" th:href="@{/css/header_main.css}"/>
+    <link rel="stylesheet" th:href="@{/css/reset_knk.css}">
+    <link rel="stylesheet" th:href="@{/style_knk.css}">
+    <!-- Color CSS -->
+    <link rel="stylesheet" th:href="@{/css/color/color1_knk.css}">
+</head>
+
+<body class="js">
+<!-- Preloader -->
+<div class="preloader">
+    <div class="preloader-inner">
+        <div class="preloader-icon">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+<!-- End Preloader -->
+
+<!--	 Header =======================================================================================================-->
+<header class="header shop v3" id="before">
+    <div class="middle-inner">
+        <div class="container">
+            <div class="header_content">
+                <div class="top_navmenu">
+                    <div class="hicinema_logo">
+                        <h1 class="logologo" data-text="HIC">
+                            <a href="">HIC</a>
+                        </h1>
+                        <span>ENJOY CULTUREFLEX</span>
+                    </div>
+                    <div class="member_menu">
+                        <ul class="memberInfo">
+                            <li>
+                                <a href=""
+                                ><i class="fa-solid fa-lock"></i><span>로그인</span></a
+                                >
+                            </li>
+                            <li>
+                                <a href=""
+                                ><i class="fa-solid fa-user-plus"></i
+                                ><span>회원가입</span></a
+                                >
+                            </li>
+                            <li>
+                                <a href=""
+                                ><i class="fa-solid fa-user-large"></i
+                                ><span>마이페이지</span></a
+                                >
+                            </li>
+                            <li>
+                                <a href=""
+                                ><i class="ti-headphone-alt"></i><span>고객센터</span></a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="header_line"></div>
+
+                <div class="bottom_navmenu">
+                    <nav id="nav">
+                        <ul>
+                            <li>
+                                <a href="">예매</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="">예매하기</a></li>
+                                        <li><a href="">상영시간표</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="">영화</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="">현재상영작</a></li>
+                                        <li><a href="">상영예정작</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="">영화관</a>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <a href="">서울</a>
+                                            <div>
+                                                <ul>
+                                                    <li><a href="">가산디지털</a></li>
+                                                    <li><a href="">노원</a></li>
+                                                    <li><a href="">종로</a></li>
+                                                    <li><a href="">가산디지털</a></li>
+                                                    <li><a href="">노원</a></li>
+                                                    <li><a href="">종로</a></li>
+                                                    <li><a href="">가산디지털</a></li>
+                                                    <li><a href="">노원</a></li>
+                                                    <li><a href="">종로</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="">경기/인천</a>
+                                            <div>
+                                                <ul>
+                                                    <li><a href="">1가산디지털</a></li>
+                                                    <li><a href="">1노원</a></li>
+                                                    <li><a href="">종로1</a></li>
+                                                    <li><a href="">가산1디지털</a></li>
+                                                    <li><a href="">노원1</a></li>
+                                                    <li><a href="">종로1</a></li>
+                                                    <li><a href="">가산디지털1</a></li>
+                                                    <li><a href="">노원1</a></li>
+                                                    <li><a href="">종로1</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="">충청/대전</a>
+                                            <div>
+                                                <ul>
+                                                    <li><a href="">가산디지털</a></li>
+                                                    <li><a href="">노원</a></li>
+                                                    <li><a href="">종로</a></li>
+                                                    <li><a href="">가산디지털</a></li>
+                                                    <li><a href="">노원</a></li>
+                                                    <li><a href="">종로</a></li>
+                                                    <li><a href="">가산디지털</a></li>
+                                                    <li><a href="">노원</a></li>
+                                                    <li><a href="">종로</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="">전라/광주</a>
+                                            <div>
+                                                <ul>
+                                                    <li><a href="">가산디지털2</a></li>
+                                                    <li><a href="">노원2</a></li>
+                                                    <li><a href="">종로2</a></li>
+                                                    <li><a href="">가산디지털2</a></li>
+                                                    <li><a href="">노원2</a></li>
+                                                    <li><a href="">종로2</a></li>
+                                                    <li><a href="">가산디지털2</a></li>
+                                                    <li><a href="">노원2</a></li>
+                                                    <li><a href="">종로2</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="">경북/대구</a>
+                                            <div>
+                                                <ul>
+                                                    <li><a href="">가산디지털3</a></li>
+                                                    <li><a href="">노원3</a></li>
+                                                    <li><a href="">종로3</a></li>
+                                                    <li><a href="">가산디지털3</a></li>
+                                                    <li><a href="">노원3</a></li>
+                                                    <li><a href="">종로3</a></li>
+                                                    <li><a href="">가산디지털3</a></li>
+                                                    <li><a href="">노원3</a></li>
+                                                    <li><a href="">종로3</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="">경남/부산/울산</a>
+                                            <div>
+                                                <ul>
+                                                    <li><a href="">가산디지털4</a></li>
+                                                    <li><a href="">노원4</a></li>
+                                                    <li><a href="">종로4</a></li>
+                                                    <li><a href="">가산디지털4</a></li>
+                                                    <li><a href="">노원4</a></li>
+                                                    <li><a href="">종로4</a></li>
+                                                    <li><a href="">가산디지털4</a></li>
+                                                    <li><a href="">노원4</a></li>
+                                                    <li><a href="">종로4</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="">강원</a>
+                                            <div>
+                                                <ul>
+                                                    <li><a href="">가산디지털5</a></li>
+                                                    <li><a href="">노원5</a></li>
+                                                    <li><a href="">종로5</a></li>
+                                                    <li><a href="">가산디지털5</a></li>
+                                                    <li><a href="">노원5</a></li>
+                                                    <li><a href="">종로5</a></li>
+                                                    <li><a href="">가산디지털5</a></li>
+                                                    <li><a href="">노원5</a></li>
+                                                    <li><a href="">종로5</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="">제주</a>
+                                            <div>
+                                                <ul>
+                                                    <li><a href="">가산디지털6</a></li>
+                                                    <li><a href="">노원6</a></li>
+                                                    <li><a href="">종로6</a></li>
+                                                    <li><a href="">가산디지털6</a></li>
+                                                    <li><a href="">노원6</a></li>
+                                                    <li><a href="">종로6</a></li>
+                                                    <li><a href="">가산디지털6</a></li>
+                                                    <li><a href="">노원6</a></li>
+                                                    <li><a href="">종로6</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="">이벤트</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="">진행중인 이벤트</a></li>
+                                        <li><a href="">지난 이벤트</a></li>
+                                        <li><a href="">당첨자발표</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="">스토어</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="">베스트</a></li>
+                                        <li><a href="">스낵/음료</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="search_form">
+                        <div class="search">
+                            <form>
+                                <input type="text" placeholder=" search" name="search"/>
+                                <button class="button" value="search" type="submit">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<header class="header shop v3" id="after">
+    <!-- 고정 헤더 디자인 ============================ -->
+
+    <div class="middle-inner">
+        <div class="container">
+            <div class="header_content">
+                <div class="top_navmenu">
+                    <div class="hicinema_logo">
+                        <h1 class="logologo" data-text="HIC">
+                            <a href="">HIC</a>
+                        </h1>
+                    </div>
+
+                    <nav id="nav2">
+                        <ul>
+                            <li>
+                                <a href="">예매</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="">예매하기</a></li>
+                                        <li><a href="">상영시간표</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="">영화</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="">현재상영작</a></li>
+                                        <li><a href="">상영예정작</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="">영화관</a>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <a href="">서울</a>
+                                            <div>
+                                                <ul>
+                                                    <li><a href="">가산디지털</a></li>
+                                                    <li><a href="">노원</a></li>
+                                                    <li><a href="">종로</a></li>
+                                                    <li><a href="">가산디지털</a></li>
+                                                    <li><a href="">노원</a></li>
+                                                    <li><a href="">종로</a></li>
+                                                    <li><a href="">가산디지털</a></li>
+                                                    <li><a href="">노원</a></li>
+                                                    <li><a href="">종로</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="">경기/인천</a>
+                                            <div>
+                                                <ul>
+                                                    <li><a href="">1가산디지털</a></li>
+                                                    <li><a href="">1노원</a></li>
+                                                    <li><a href="">종로1</a></li>
+                                                    <li><a href="">가산1디지털</a></li>
+                                                    <li><a href="">노원1</a></li>
+                                                    <li><a href="">종로1</a></li>
+                                                    <li><a href="">가산디지털1</a></li>
+                                                    <li><a href="">노원1</a></li>
+                                                    <li><a href="">종로1</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="">충청/대전</a>
+                                            <div>
+                                                <ul>
+                                                    <li><a href="">가산디지털</a></li>
+                                                    <li><a href="">노원</a></li>
+                                                    <li><a href="">종로</a></li>
+                                                    <li><a href="">가산디지털</a></li>
+                                                    <li><a href="">노원</a></li>
+                                                    <li><a href="">종로</a></li>
+                                                    <li><a href="">가산디지털</a></li>
+                                                    <li><a href="">노원</a></li>
+                                                    <li><a href="">종로</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="">전라/광주</a>
+                                            <div>
+                                                <ul>
+                                                    <li><a href="">가산디지털2</a></li>
+                                                    <li><a href="">노원2</a></li>
+                                                    <li><a href="">종로2</a></li>
+                                                    <li><a href="">가산디지털2</a></li>
+                                                    <li><a href="">노원2</a></li>
+                                                    <li><a href="">종로2</a></li>
+                                                    <li><a href="">가산디지털2</a></li>
+                                                    <li><a href="">노원2</a></li>
+                                                    <li><a href="">종로2</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="">경북/대구</a>
+                                            <div>
+                                                <ul>
+                                                    <li><a href="">가산디지털3</a></li>
+                                                    <li><a href="">노원3</a></li>
+                                                    <li><a href="">종로3</a></li>
+                                                    <li><a href="">가산디지털3</a></li>
+                                                    <li><a href="">노원3</a></li>
+                                                    <li><a href="">종로3</a></li>
+                                                    <li><a href="">가산디지털3</a></li>
+                                                    <li><a href="">노원3</a></li>
+                                                    <li><a href="">종로3</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="">경남/부산/울산</a>
+                                            <div>
+                                                <ul>
+                                                    <li><a href="">가산디지털4</a></li>
+                                                    <li><a href="">노원4</a></li>
+                                                    <li><a href="">종로4</a></li>
+                                                    <li><a href="">가산디지털4</a></li>
+                                                    <li><a href="">노원4</a></li>
+                                                    <li><a href="">종로4</a></li>
+                                                    <li><a href="">가산디지털4</a></li>
+                                                    <li><a href="">노원4</a></li>
+                                                    <li><a href="">종로4</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="">강원</a>
+                                            <div>
+                                                <ul>
+                                                    <li><a href="">가산디지털5</a></li>
+                                                    <li><a href="">노원5</a></li>
+                                                    <li><a href="">종로5</a></li>
+                                                    <li><a href="">가산디지털5</a></li>
+                                                    <li><a href="">노원5</a></li>
+                                                    <li><a href="">종로5</a></li>
+                                                    <li><a href="">가산디지털5</a></li>
+                                                    <li><a href="">노원5</a></li>
+                                                    <li><a href="">종로5</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="">제주</a>
+                                            <div>
+                                                <ul>
+                                                    <li><a href="">가산디지털6</a></li>
+                                                    <li><a href="">노원6</a></li>
+                                                    <li><a href="">종로6</a></li>
+                                                    <li><a href="">가산디지털6</a></li>
+                                                    <li><a href="">노원6</a></li>
+                                                    <li><a href="">종로6</a></li>
+                                                    <li><a href="">가산디지털6</a></li>
+                                                    <li><a href="">노원6</a></li>
+                                                    <li><a href="">종로6</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="">이벤트</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="">진행중인 이벤트</a></li>
+                                        <li><a href="">지난 이벤트</a></li>
+                                        <li><a href="">당첨자발표</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="">스토어</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="">베스트</a></li>
+                                        <li><a href="">스낵/음료</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="my">
+                        <a href="마이영화관"><i class="fa-regular fa-star"></i></a>
+                        <a href="마이페이지"><i class="fa-regular fa-user"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--/ End Header -->
+
+<!-- Start Area 2 -->
+<section class="hero-area4">
+    <div class="container1">
+        <div class="row">
+            <div class="home-slider-4">
+                <div class="big-content" style="background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.25) 15%, rgba(0,0,0,0.14) 20%, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 42%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 57%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.14) 80%, rgba(0,0,0,0.25) 85%, rgba(0,0,0,0.5) 90%, rgba(0,0,0,1) 100%),
+					url('/img_knk/banner/aespa_19207742.jpg');">
+                </div>
+                <div class="big-content" style="background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.25) 15%, rgba(0,0,0,0.14) 20%, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 42%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 57%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.14) 80%, rgba(0,0,0,0.25) 85%, rgba(0,0,0,0.5) 90%, rgba(0,0,0,1) 100%),
+					url('/img_knk/banner/BabyShark_1920774.jpg');">
+                </div>
+                <div class="big-content" style="background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.25) 15%, rgba(0,0,0,0.14) 20%, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 42%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 57%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.14) 80%, rgba(0,0,0,0.25) 85%, rgba(0,0,0,0.5) 90%, rgba(0,0,0,1) 100%),
+					url('/img_knk/banner/IfOnly_1920774.jpg');">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ End Hero Area 2 -->
+
+<!-- Start Most Popular -->
+<div class="product-area most-popular section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <h2>박스오피스</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="owl-carousel popular-slider">
+                    <!-- Start Single Product -->
+                    <div class="single-product">
+                        <div class="product-img">
+                            <a href="product-details.html">
+                                <img class="default-img"
+                                     src="https://cf2.lottecinema.co.kr/lotte_image/2024/DMZanimals/DMZanimals_184262.jpg"
+                                     alt="DMZ 동물특공대 2월 14일 대개봉 전체관람가 핑크퐁 제작진">
+                                <img class="hover-img"
+                                     src="https://cf2.lottecinema.co.kr/lotte_image/2024/DMZanimals/DMZanimals_184262.jpg"
+                                     alt="DMZ 동물특공대 2월 14일 대개봉 전체관람가 핑크퐁 제작진">
+                            </a>
+                            <!-- <div class="button-head">
+                                <div class="product-action">
+                                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View"
+                                        href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to
+                                            Wishlist</span></a>
+                                    <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to
+                                            Compare</span></a>
+                                </div>
+                                <div class="product-action-2">
+                                    <a title="Add to cart" href="#">Add to cart</a>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="product-content">
+                            <a href="#">
+                                <div class="boxoffice-btn">
+                                    <h>예매</h>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Single Product -->
+                    <!-- Start Single Product -->
+                    <div class="single-product">
+                        <div class="product-img">
+                            <a href="product-details.html">
+                                <img class="default-img"
+                                     src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20661_101_1.jpg"
+                                     alt="시민덕희">
+                                <img class="hover-img"
+                                     src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20661_101_1.jpg"
+                                     alt="시민덕희">
+                            </a>
+                            <!-- <div class="button-head">
+                                <div class="product-action">
+                                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View"
+                                        href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to
+                                            Wishlist</span></a>
+                                    <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to
+                                            Compare</span></a>
+                                </div>
+                                <div class="product-action-2">
+                                    <a title="Add to cart" href="#">Add to cart</a>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="product-content">
+                            <a href="#">
+                                <div class="boxoffice-btn">
+                                    <h>예매</h>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Single Product -->
+                    <!-- Start Single Product -->
+                    <div class="single-product">
+                        <div class="product-img">
+                            <a href="product-details.html">
+                                <img class="default-img"
+                                     src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_101_1.jpg"
+                                     alt="소풍">
+                                <img class="hover-img"
+                                     src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20782_101_1.jpg"
+                                     alt="소풍">
+                            </a>
+                            <!-- <div class="button-head">
+                                <div class="product-action">
+                                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View"
+                                        href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to
+                                            Wishlist</span></a>
+                                    <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to
+                                            Compare</span></a>
+                                </div>
+                                <div class="product-action-2">
+                                    <a title="Add to cart" href="#">Add to cart</a>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="product-content">
+                            <a href="#">
+                                <div class="boxoffice-btn">
+                                    <h>예매</h>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Single Product -->
+                    <!-- Start Single Product -->
+                    <div class="single-product">
+                        <div class="product-img">
+                            <a href="product-details.html">
+                                <img class="default-img"
+                                     src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20754_101_1.jpg"
+                                     alt="도그데이즈">
+                                <img class="hover-img"
+                                     src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20754_101_1.jpg"
+                                     alt="도그데이즈">
+                            </a>
+                            <!-- <div class="button-head">
+                                <div class="product-action">
+                                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View"
+                                        href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to
+                                            Wishlist</span></a>
+                                    <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to
+                                            Compare</span></a>
+                                </div>
+                                <div class="product-action-2">
+                                    <a title="Add to cart" href="#">Add to cart</a>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="product-content">
+                            <a href="#">
+                                <div class="boxoffice-btn">
+                                    <h>예매</h>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Single Product -->
+                    <!-- Start Single Product -->
+                    <div class="single-product">
+                        <div class="product-img">
+                            <a href="product-details.html">
+                                <img class="default-img"
+                                     src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20710_101_1.jpg"
+                                     alt="듄: 파트2">
+                                <img class="hover-img"
+                                     src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20710_101_1.jpg"
+                                     alt="듄: 파트2">
+                            </a>
+                            <!-- <div class="button-head">
+                                <div class="product-action">
+                                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View"
+                                        href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to
+                                            Wishlist</span></a>
+                                    <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to
+                                            Compare</span></a>
+                                </div>
+                                <div class="product-action-2">
+                                    <a title="Add to cart" href="#">Add to cart</a>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="product-content">
+                            <a href="#">
+                                <div class="boxoffice-btn">
+                                    <h>예매</h>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Single Product -->
+                    <!-- Start Single Product -->
+                    <div class="single-product">
+                        <div class="product-img">
+                            <a href="product-details.html">
+                                <img class="default-img"
+                                     src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20756_101_1.jpg"
+                                     alt="데드맨">
+                                <img class="hover-img"
+                                     src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202402/20756_101_1.jpg"
+                                     alt="데드맨">
+                            </a>
+                            <!-- <div class="button-head">
+                                <div class="product-action">
+                                    <a data-toggle="modal" data-target="#exampleModal" title="Quick View"
+                                        href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                    <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to
+                                            Wishlist</span></a>
+                                    <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to
+                                            Compare</span></a>
+                                </div>
+                                <div class="product-action-2">
+                                    <a title="Add to cart" href="#">Add to cart</a>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="product-content">
+                            <a href="#">
+                                <div class="boxoffice-btn">
+                                    <h>예매</h>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Single Product -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Most Popular Area -->
+<br><br><br><br><br><br><br><br>
+
+<!-- Start Area 2 -->
+<section class="hero-area3">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title1">
+                    <h3>이벤트</h3>
+                    <a href="#">
+                        <h>더보기 ></h>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-4 col-12">
+                <div class="small-content first">
+                    <img src="img_knk/event/2.png">
+                </div>
+                <div class="small-content secound">
+                    <img src="img_knk/event/3.png">
+                </div>
+            </div>
+            <div class="col-lg-8 col-12">
+                <div class="big-content">
+                    <img src="img_knk/event/1.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ End Hero Area 2 -->
+
+<br><br><br><br><br><br><br><br>
+
+<!--공지사항 시작-->
+<section class="notice">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title1">
+                    <h3>공지사항</h3>
+                    <br><br>
+                </div>
+                <div id="clear"></div>
+                <article class="help_box1">
+                    <div class="notice-box1">
+                        <ul>
+                            <li class="active"><a href="#"><b>전체 공지</b></a>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt><strong class="bar">전체</strong>
+                                                <h>2024.01.30</h>
+                                            </dt>
+                                            <dd><a href="#">[행사/이벤트] [웡카] 4DX 신규 초콜릿향 진행극장 변경 안내 (1/31~2/6)</a>
+                                            </dd>
+                                            <hr>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt><strong class="bar">전체</strong>
+                                                <h>2024.01.30</h>
+                                            </dt>
+                                            <dd><a href="#">[행사/이벤트] [웡카] 4DX 신규 초콜릿향 진행극장 변경 안내 (1/31~2/6)</a>
+                                            </dd>
+                                            <hr>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt><strong class="bar">전체</strong>
+                                                <h>2024.01.30</h>
+                                            </dt>
+                                            <dd><a href="#">[행사/이벤트] [웡카] 4DX 신규 초콜릿향 진행극장 변경 안내 (1/31~2/6)</a>
+                                            </dd>
+                                            <hr>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="active1"><a href="#"><b>영화관 공지</b></a>
+                                <ul>
+                                    <li>
+                                        <dl>
+                                            <dt><strong class="bar">영화관</strong>
+                                                <h>2024.02.14</h>
+                                            </dt>
+                                            <dd><a href="#">[경주] 영업 종료 안내 - 2024년 2월 29일</a></dd>
+                                            <hr>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt><strong class="bar">전체</strong>
+                                                <h>2024.01.30</h>
+                                            </dt>
+                                            <dd><a href="#">[행사/이벤트] [웡카] 4DX 신규 초콜릿향 진행극장 변경 안내 (1/31~2/6)</a>
+                                            </dd>
+                                            <hr>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt><strong class="bar">영화관</strong>
+                                                <h>2024.02.08</h>
+                                            </dt>
+                                            <dd><a href="#">[남양주현대아울렛] 설 당일 주차장 이용 안내</a></dd>
+                                            <hr>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="help_box2">
+                    <div class="notice-box2">
+                        <div class="notice-box2-inquiry"><a href="#"><img src="img_knk/icon/inquiry0.png">
+                            <div id="clear"></div>
+                            <h>1:1 문의</h>
+                        </a>
+                        </div>
+                        <div class="notice-box2-question"><a href="#"><img src="img_knk/icon/question0.png">
+                            <div id="clear"></div>
+                            <h>자주 묻는 질문</h>
+                        </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+<!--공지사항 끝-->
+<div id="clear"></div>
+<br><br><br><br><br><br><br><br>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close"
+                                                                                                  aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row no-gutters">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <!-- Product Slider -->
+                        <div class="product-gallery">
+                            <div class="quickview-slider-active">
+                                <div class="single-slider">
+                                    <img src="https://cf2.lottecinema.co.kr/lotte_image/2024/DMZanimals/DMZanimals_184262.jpg"
+                                         alt="DMZ 동물특공대 2월 14일 대개봉 전체관람가 핑크퐁 제작진">
+                                </div>
+                                <div class="single-slider">
+                                    <img src="https://via.placeholder.com/569x528" alt="#">
+                                </div>
+                                <div class="single-slider">
+                                    <img src="https://via.placeholder.com/569x528" alt="#">
+                                </div>
+                                <div class="single-slider">
+                                    <img src="https://via.placeholder.com/569x528" alt="#">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Product slider -->
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <div class="quickview-content">
+                            <h2>Flared Shift Dress</h2>
+                            <div class="quickview-ratting-review">
+                                <div class="quickview-ratting-wrap">
+                                    <div class="quickview-ratting">
+                                        <i class="yellow fa fa-star"></i>
+                                        <i class="yellow fa fa-star"></i>
+                                        <i class="yellow fa fa-star"></i>
+                                        <i class="yellow fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <a href="#"> (1 customer review)</a>
+                                </div>
+                                <div class="quickview-stock">
+                                    <span><i class="fa fa-check-circle-o"></i> in stock</span>
+                                </div>
+                            </div>
+                            <h3>$29.00</h3>
+                            <div class="quickview-peragraph">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iste laborum
+                                    ad impedit pariatur esse optio tempora sint ullam autem deleniti nam in quos qui
+                                    nemo ipsum numquam.</p>
+                            </div>
+                            <div class="size">
+                                <div class="row">
+                                    <div class="col-lg-6 col-12">
+                                        <h5 class="title">Size</h5>
+                                        <select>
+                                            <option selected="selected">s</option>
+                                            <option>m</option>
+                                            <option>l</option>
+                                            <option>xl</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <h5 class="title">Color</h5>
+                                        <select>
+                                            <option selected="selected">orange</option>
+                                            <option>purple</option>
+                                            <option>black</option>
+                                            <option>pink</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quantity">
+                                <!-- Input Order -->
+                                <div class="input-group">
+                                    <div class="button minus">
+                                        <button type="button" class="btn btn-primary btn-number" disabled="disabled"
+                                                data-type="minus" data-field="quant[1]">
+                                            <i class="ti-minus"></i>
+                                        </button>
+                                    </div>
+                                    <input type="text" name="quant[1]" class="input-number" data-min="1"
+                                           data-max="1000" value="1">
+                                    <div class="button plus">
+                                        <button type="button" class="btn btn-primary btn-number" data-type="plus"
+                                                data-field="quant[1]">
+                                            <i class="ti-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!--/ End Input Order -->
+                            </div>
+                            <div class="add-to-cart">
+                                <a href="#" class="btn">Add to cart</a>
+                                <a href="#" class="btn min"><i class="ti-heart"></i></a>
+                                <a href="#" class="btn min"><i class="fa fa-compress"></i></a>
+                            </div>
+                            <div class="default-social">
+                                <h4 class="share-now">Share:</h4>
+                                <ul>
+                                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="youtube" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                    <li><a class="dribbble" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal end -->
+<div th:replace="user_test/common/commonJs.html"></div>
+</body>
+
+</html>

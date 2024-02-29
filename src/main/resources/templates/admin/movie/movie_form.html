@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout_admin}">
+
+<th:block layout:fragment="css">
+
+</th:block>
+
+<div class="container-scroller">
+
+    <div class="container-fluid page-body-wrapper">
+
+        <div class="main-panel">
+            <div layout:fragment="content" class="content-wrapper">
+                <div class="page-header">
+                    <!--                    <h3 class="page-title">-->
+                    <!--                        Forms-->
+                    <!--                    </h3>-->
+                    <!--                    <nav aria-label="breadcrumb">-->
+                    <!--                        <ol class="breadcrumb">-->
+                    <!--                            <li class="breadcrumb-item"><a href="#">Forms</a></li>-->
+                    <!--                            <li class="breadcrumb-item active" aria-current="page">Basic elements</li>-->
+                    <!--                        </ol>-->
+                    <!--                    </nav>-->
+                </div>
+                <div class="row">
+                    <div class="col-12 grid-margin">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">영화 등록</h4><br><br><br>
+                                <form class="form-sample">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label class="col-form-label">장르</label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <div class="form-check form-check-primary">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" checked="">
+                                                        Primary
+                                                        <i class="input-helper"></i></label>
+                                                </div>
+                                                <div class="form-check form-check-success">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" checked="">
+                                                        Success
+                                                        <i class="input-helper"></i></label>
+                                                </div>
+                                                <div class="form-check form-check-info">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" checked="">
+                                                        Info
+                                                        <i class="input-helper"></i></label>
+                                                </div>
+                                                <div class="form-check form-check-danger">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" checked="">
+                                                        Danger
+                                                        <i class="input-helper"></i></label>
+                                                </div>
+                                                <div class="form-check form-check-warning">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" checked="">
+                                                        Warning
+                                                        <i class="input-helper"></i></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <div class="form-check form-check-primary">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" checked="">
+                                                        Primary
+                                                        <i class="input-helper"></i></label>
+                                                </div>
+                                                <div class="form-check form-check-success">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" checked="">
+                                                        Success
+                                                        <i class="input-helper"></i></label>
+                                                </div>
+                                                <div class="form-check form-check-info">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" checked="">
+                                                        Info
+                                                        <i class="input-helper"></i></label>
+                                                </div>
+                                                <div class="form-check form-check-danger">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" checked="">
+                                                        Danger
+                                                        <i class="input-helper"></i></label>
+                                                </div>
+                                                <div class="form-check form-check-warning">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" checked="">
+                                                        Warning
+                                                        <i class="input-helper"></i></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">영화 제목</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">상영 등급</label>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-check form-check-primary">
+                                                            <label class="form-check-label">
+                                                                <input type="radio" class="form-check-input" name="ExampleRadio1" id="ExampleRadio1" checked="">
+                                                                전체관람가
+                                                                <i class="input-helper"></i></label>
+                                                        </div>
+                                                        <div class="form-check form-check-success">
+                                                            <label class="form-check-label">
+                                                                <input type="radio" class="form-check-input" name="ExampleRadio2" id="ExampleRadio2" checked="">
+                                                                12세이상관람가
+                                                                <i class="input-helper"></i></label>
+                                                        </div>
+                                                        <div class="form-check form-check-info">
+                                                            <label class="form-check-label">
+                                                                <input type="radio" class="form-check-input" name="ExampleRadio3" id="ExampleRadio3" checked="">
+                                                                15세이상관람가
+                                                                <i class="input-helper"></i></label>
+                                                        </div>
+                                                        <div class="form-check form-check-danger">
+                                                            <label class="form-check-label">
+                                                                <input type="radio" class="form-check-input" name="ExampleRadio4" id="ExampleRadio4" checked="">
+                                                                18세이상관람가
+                                                                <i class="input-helper"></i></label>
+                                                        </div>
+                                                        <div class="form-check form-check-warning">
+                                                            <label class="form-check-label">
+                                                                <input type="radio" class="form-check-input" name="ExampleRadio5" id="ExampleRadio5" checked="">
+                                                                none
+                                                                <i class="input-helper"></i></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">스틸컷</label>
+                                                <input type="file" name="img[]" class="file-upload-default" multiple="">
+                                                <div class="input-group col-sm-9">
+                                                    <input type="text" class="form-control form-control-lg file-upload-info" disabled="" placeholder="Upload Image" multiple="">
+                                                    <span class="input-group-append">
+                                                      <button class="file-upload-browse btn btn-gradient-primary" type="button" style="height: 73%">Upload</button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 thumbnail-box">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label"></label>
+                                                <div class="col-sm-9">
+                                                    <div class="col-lg-12">
+                                                        <img src="https://cf.lottecinema.co.kr//Media/Event/1fa4c12645054dbbb5148917531ac456.jpg" alt="" srcset="">
+                                                        <button type="button"
+                                                                class="btn btn-outline-secondary btn-rounded btn-icon text-danger">
+                                                            x
+                                                        </button>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <img src="https://cf.lottecinema.co.kr//Media/Event/1fa4c12645054dbbb5148917531ac456.jpg" alt="" srcset="">
+                                                        <button type="button"
+                                                                class="btn btn-outline-secondary btn-rounded btn-icon text-danger">
+                                                            x
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">트레일러(url)</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control"/>
+                                                    <button type="button" class="btn btn-gradient-primary mr-2" onclick="add_trailer()">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">감독명(콤마(,)로 구분)</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">출연(콤마(,)로 구분)</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">줄거리</label>
+                                                <div class="col-sm-9">
+                                                    <textarea class="form-control" id="exampleTextarea1" rows="4">
+
+                                                    </textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-gradient-primary mr-2" style="float: right">
+                                        등록
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<th:block layout:fragment="script">
+
+</th:block>
+
+</body>
+</html>

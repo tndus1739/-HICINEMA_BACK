@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout_user2}">
+
+<th:block layout:fragment="css">
+<link rel="stylesheet" th:href="@{/css/color/color1_knk.css}">
+ <style>
+   .alert_red {
+    color: #df0505;
+    padding-left: 15px;
+    width: 97%;
+    BACKGROUND-COLOR: #ffc0c073;
+    BORDER-RADIUS: 3PX;
+    BORDER: SOLID 1PX #ff000045;
+    MARGIN: 0 AUTO;
+    MARGIN-BOTTOM: 25PX;
+}
+   
+.shop.login {
+    padding: 220px 0 150px 0 !important;
+    }
+   
+</style> 
+</th:block>
+
+
+<div layout:fragment="content">
+
+
+		<!-- 회원가입 -->
+		<div class ="content_box">
+		<section class="shop login section">
+			<div class="container">
+				<div class="row"> 
+					<div class="col-lg-6 offset-lg-3 col-12">
+						<div class="register-form">
+							<h3><b>회원가입</b></h3>
+							<!-- Form -->
+							<form class="form"  th:action="@{/member/register}" 						 
+										th:object="${memberCreateForm}" 
+										method="post">
+							<!-- <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"> -->
+						 
+								<div class="alert_red" role="alert" th:if="${#fields.hasAnyErrors()}">
+           						 <div th:each="err : ${#fields.allErrors()}" th:text="${err}"></div>
+                                 </div> 
+                           
+								<!--  
+								<div th:replace="~{form_errors :: formErrorsFragment}"></div>						
+							-->
+								<div class="row">
+									<div class="col-12">
+										<div class="form-group">
+											<label for ="name">이름</label>
+											<input type="text" th:filed="*{name}" name="name"  placeholder="" required="required">
+											
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group">
+											<label for ="memberId">아이디</label>
+											<input type="text" th:filed="*{memberId}" name="memberId" placeholder="" required="required">
+										</div>
+									</div>
+									
+								
+                                 
+                                 
+									<div class="col-12">
+										<div class="form-group">
+											<label for ="password1">비밀번호</label>
+											<input type="password" th:filed="*{password1}" name="password1" placeholder="" required="required">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group">
+											<label for ="password2">비밀번호 확인</label>
+											<input type="password"  th:filed="*{password2}" name="password2" placeholder="" required="required">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group">
+											<label for ="phone">휴대폰 번호</label>
+											<input type="text" th:filed="*{phone}" name="phone" placeholder="" required="required">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group">
+											<label for ="email">이메일</label>
+											<input type="email" th:filed="*{email}" name="email" placeholder="" required="required">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group register-btn">
+											<button class="btn" type="submit">회원가입</button>
+										</div>
+									</div>
+								</div>
+							</form>
+							<!--/ End Form -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Login -->
+		</div>
+	</div>
+
+</html>

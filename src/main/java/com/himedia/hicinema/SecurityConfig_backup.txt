@@ -1,0 +1,57 @@
+
+
+
+@Configuration
+@EnableWebSecurity // 스프링 시큐리티 필터가 스프링 필터체인에 등록이 됨
+public class SecurityConfig {
+	@Bean
+	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+		http
+				.authorizeHttpRequests((authorizeHttpRequests) -> authorizeHttpRequests
+						.requestMatchers(new AntPathRequestMatcher("/**")).permitAll()
+//			
+//						.requestMatchers(
+//								new AntPathRequestMatcher("/img/**"),
+//								new AntPathRequestMatcher("/css/**")
+//						
+//						).permitAll()
+//				
+//				.requestMatchers(new AntPathRequestMatcher("/admin/**")).hasRole("ADMIN")				
+//				.requestMatchers(new AntPathRequestMatcher("/user/**")).hasRole("USER"))
+//
+//
+//
+//
+////				authorizeRequest() // 예전방식
+//				
+//		 
+//				
+//			 .formLogin((formLogin) -> formLogin
+//                .loginPage("/member/login")
+//				.usernameParameter("memberId")  //★★★★★★  생략하면 안됨
+//				.passwordParameter("password")
+//                .defaultSuccessUrl("/")) // 로그인 성공시 이동할 루트페이지
+//
+//        .logout((logout) -> logout
+//				.logoutRequestMatcher(new AntPathRequestMatcher("/member/logout"))
+//				.logoutSuccessUrl("/")
+//				.invalidateHttpSession(true))
+               ;
+		
+		
+		
+		return http.build();
+	}
+	
+	
+	
+	
+	
+	
+	
+	@Bean
+    PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+	
+}

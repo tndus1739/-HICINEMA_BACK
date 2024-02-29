@@ -1,0 +1,56 @@
+.col-lg-6.col-12.single-poster {
+    text-align: center;
+}
+
+.description.movie-desc {
+    display: -webkit-box;
+    /*(또는 -webkit-inline-box)*/
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: auto;
+}
+
+.h4-title {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.modal-body .row {
+    margin: 0 auto !important;
+    height: 100% !important;
+}
+
+.modal-dialog .modal-body {
+    height: auto !important;
+}
+
+.modal-body .row div {
+    padding: 0 !important;
+    height: 100% !important;
+}
+.modal-body .row div img {
+    height: 100% !important;
+}
+
+.modal-content {
+    background: 0;
+    border: 0;
+}
+
+.modal-dialog {
+    width: 50% !important;
+}
+
+/*.tab-pane#description .tab-single .row{*/
+/*    margin: 10%;*/
+/*}*/
+
+.tab-pane#description .tab-single .row .col-lg-5.col-12 {
+    margin: 4%;
+}
+
+.modal-body {
+    align-self: end;
+}

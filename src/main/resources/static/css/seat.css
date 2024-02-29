@@ -1,0 +1,84 @@
+/* CSS 코드는 이전 예제와 동일합니다 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container-seat {
+    min-width: 1100px !important;
+    margin: 50px auto;
+    /*background-color: #050523;*/
+    background-color: #101010;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.screen {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.seat {
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    margin: 4px;
+    cursor: pointer;
+    /*border-radius: 5px;*/
+    text-align: center;
+    color: blue;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.seat.selected {
+    background-color: #72cdff;
+}
+
+.seat.occupied {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+.seat:hover {
+    background-color: #5cb85c;
+}
+
+.seat_row {
+    display: inline-flex;
+    padding-right: 20px;
+}
+
+span#total_price {
+    text-align: left;
+}
+
+#submit button {
+    float: right;
+}
+.seats {
+    text-align: center;
+}
+#submit {
+    padding-top: 3%;
+}
+
+.screens{
+    background-color: #fff;
+    margin: 25px;
+    padding: 5px;
+    width: 300px;
+    height: 150px;
+    box-shadow: 0 3px 10px rgb(255 255 255 / 70%);
+}
+
+.window {
+    text-align: -webkit-center;
+}
+.seat_row:nth-child(3), .seat_row:nth-child(6), .seat_row:nth-child(9), .seat_row:nth-child(12) {
+    padding-right: 0;
+}

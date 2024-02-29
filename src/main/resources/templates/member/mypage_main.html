@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorate="~{layouts/layout_user1}">
+
+
+<th:block layout:fragment="css">
+<link rel="stylesheet" th:href="@{/css/color/color1_knk.css}">
+<link rel="stylesheet" th:href="@{/css/style_knk2.css}">
+<link rel="stylesheet" th:href="@{/css/style_knk.css}">
+<link rel="stylesheet" th:href="@{/css/owl-carousel_knk.css}">
+<link rel="stylesheet" th:href="@{/css/reset_knk.css}">
+
+
+<style>
+.section {
+    padding: 200px 0 100px 0;
+    }
+</style>
+
+</th:block>
+
+
+
+<div layout:fragment="content">
+
+	<!-- Start Blog Single -->
+	<section class="blog-single section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="reply">
+						<form class="mypageform" action="#">
+							<div>
+								<h3>안녕하세요! <span th:text="${#authentication.name}"></span> 님</h3>
+								
+								</div>
+								<h2><span th:text="${memberId}"></span></h2>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-lg-3 col-12">
+					<div class="main-sidebar">
+						<!-- Single Widget -->
+						<div class="single-widget">
+							<a href="mypage_knk.html"><h2 class="mypage">마이페이지</h2></a>
+						</div>
+						<!--/ End Single Widget -->
+						
+						<!-- Single Widget -->
+						<div class="single-widget category">
+							<h3 class="title">나의 예매내역</h3>
+							<ul class="categor-list">
+								<li><a href="mypage_ticketing_knk.html">예매내역</a></li>
+								<li><a href="mypage_ticketing_cancel_knk.html">취소내역</a></li>
+							</ul>
+						</div>
+						<!--/ End Single Widget -->
+
+						
+
+						<!-- Single Widget -->
+						<div class="single-widget category">
+							<h3 class="title">내가 본 영화</h3>
+							<ul class="categor-list">
+								<li><a href="#">내가 본 영화</a></li>
+								<li><a href="#">내가 쓴 평점</a></li>
+							</ul>
+						</div>
+						<!--/ End Single Widget -->
+						
+						<!-- Single Widget -->
+						<div class="single-widget category">
+							<h3 class="title">스토어</h3>
+							<ul class="categor-list">
+								<li><a href="#">결제내역</a></li>
+							</ul>
+						</div>
+						<!--/ End Single Widget -->
+						
+
+						<!-- Single Widget -->
+						<div class="single-widget category">
+							<h3 class="title">회원정보</h3>
+							<ul class="categor-list">
+								<li><a th:href="@{/member/mypage_edit}">개인정보 수정</a></li>
+								<li><a href="mypage_secession_knk.html">회원탈퇴</a></li>
+							</ul>
+						</div>
+						<!--/ End Single Widget -->
+						<!-- Single Widget -->
+						<div class="single-widget category">
+							<h3 class="title">나의 문의내역</h3>
+							<ul class="categor-list">
+								<li><a href="#">1:1 문의</a></li>
+							</ul>
+						</div>
+						<!--/ End Single Widget -->
+						
+					</div>
+				</div>
+				<div class="col-lg-9 col-12">
+					<div class="blog-single-main">
+						<div class="row">
+							<div class="col-12">
+							</div>
+							<div class="col-md-6 movieform">
+								<div class="reply">
+									<form class="form1" action="#">
+										<div class="form-group">
+											<div class="mymovie-title">
+												<h3>내가 본 영화</h3>
+												<a href="#"><h>더보기 ></h></a>
+											</div>
+											<div id="clear"></div>
+											<div class="mymovie-form">
+												<img class="ratings" src="img_knk/15.png">
+												<h4><b>파묘</b></h4>
+												<a href="#">
+													<b>상영일시</b> 24.02.02(금) | 18:00~19:24
+												</a>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-md-6 reviewform">
+								<div class="reply">
+									<form class="form1" action="#">
+										<div class="form-group">
+											<div class="myreview-title">
+												<h3>내가 쓴 평점</h3>
+												<a href="#"><h>더보기 ></h></a>
+											</div>
+											<div id="clear"></div>
+											<div class="myreview-form">
+												<img class="ratings" src="img_knk/15.png">
+												<h4><b>파묘</b></h4>
+												<a href="#">
+													장재현 감독의 비현실과 미신의 이야기를 소름돋는 스토리로 잘 엮어내어 영화를 보는 내내 감탄하며 몸서리를 쳤다. 배우들의 연기와 스토리의 전개. 특히 후반에 풀어지는 정체들이 너무나도 소름끼치게 끈적이게 다가왔다
+												</a>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="comments">
+									<h3 class="comment-title">나의 예매내역</h3>
+								</div>
+								<div class="reply">
+									<div class="myticketing">
+										<form class="form" action="#">
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-12">
+													<div class="myticketing-form">
+														<img class="myticketing-poster" src="img_knk/파묘_메인.jpg">
+														<img class="ratings" src="img_knk/15.png">
+														<h4><b>파묘</b></h4>
+														<hr>
+														<a href="#">
+															<h><b>상영일시</b> 24.02.02(금) | 18:00~19:24</h>
+															<p>
+																<h><b>영화관</b> 강남1관 세스코안심존</h>
+																<p>
+																	<h><b>관람인원</b> 성인 1</h>
+																<p>
+																	<h><b>좌석</b> B7</h>
+														</a>
+													</div>
+												</div>
+												<div class="col-lg-6 col-md-6 col-12">
+													<div class="myticketing-form">
+														<img class="myticketing-poster" src="img_knk/웡카_메인 포스터.jpg">
+														<img class="ratings" src="img_knk/15.png">
+														<h4><b>웡카</b></h4>
+														<hr>
+														<a href="#">
+															<h><b>상영일시</b> 24.02.02(금) | 18:00~19:24</h>
+															<p>
+																<h><b>영화관</b> 강남1관 세스코안심존</h>
+																<p>
+																	<h><b>관람인원</b> 성인 1</h>
+																<p>
+																	<h><b>좌석</b> B7</h>
+														</a>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="comments">
+									<h3 class="comment-title">나의 문의내역</h3>
+								</div>
+								<div class="reply">
+									<div class="reply-head">
+										<!-- Comment Form -->
+										<form class="form" action="#">
+											<div class="row">
+												<div class="col-lg-6 col-md-6 col-12">
+													<div class="form-group">
+														<!-- <label>Your Name<span>*</span></label>
+														<input type="text" name="name" placeholder=""
+															required="required"> -->
+													</div>
+												</div>
+											</div>
+										</form>
+										<!-- End Comment Form -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!--/ End Blog Single -->
+
+</div>
+	
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout_admin}">
+ 
+<th:block layout:fragment="css">
+	<link rel="stylesheet" th:href="@{/admin/css/style_knk.css}">
+</th:block>     
+      
+<div class="container-scroller">
+	<div class="main-panel">
+        <div class="content-wrapper">
+          <div class="page-header">
+            <h3 class="page-title">
+              <b>이벤트 수정</b>
+            </h3>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">홈페이지 관리</a></li>
+                <li class="breadcrumb-item active" aria-current="page">이벤트 목록</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+            </div>
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <form class="forms-sample">
+                    <div class="form-group">
+                      <label for="exampleInputName1">제목</label>
+                      <input type="text" class="form-control" id="exampleInputName1" placeholder="제목">
+                    </div>
+                    <!-- 내용 에디터 -->
+                    <div class="form-group">
+                      <!-- <label for="exampleInputName1">내용</label> -->
+                      <div id="content"></div>
+                    </div>
+                    <!-- <label for="exampleTextarea1">내용</label>
+                      <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>-->
+                    <div class="form-group">
+                      <label for="state">상태</label>
+                      <select class="form-control" id="state">
+                        <option>게시 중</option>
+                        <option>게시 중지</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="eventstart">시작일</label><p>
+                      <input type="datetime-local" id="eventstart" max="2040-12-31T23:59" min="2024-02-20T12:30"
+                        value="2024-02-20T12:30"></p>
+                    </div>
+                    <div class="form-group">
+                      <label for="eventend">종료일</label><p>
+                      <input type="datetime-local" id="eventend" max="2040-12-31T23:59" min="2024-02-20T12:30"
+                        value="2024-02-20T12:30"></p>
+                    </div>
+
+                    <button type="button" class="btn btn-gradient-primary mr-2" onclick="location.href='http://192.168.0.68:5500/admin/event_list_knk.html';">수정</button>
+                    <button type="button" class="btn btn-light" onclick="location.href='http://192.168.0.68:5500/admin/event_list_knk.html';">취소</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+</div>
+
+<th:block layout:fragment="script">
+	<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+	<script>
+    const editor = new toastui.Editor({
+      el: document.querySelector('#content'), // 에디터를 적용할 요소 (컨테이너)
+      height: '500px',                        // 에디터 영역의 높이 값 (OOOpx || auto)
+      initialEditType: 'wysiwyg',            // 최초로 보여줄 에디터 타입 (markdown || wysiwyg)
+      initialValue: '',     // 내용의 초기 값으로, 반드시 마크다운 문자열 형태여야 함
+      previewStyle: 'vertical'                // 마크다운 프리뷰 스타일 (tab || vertical)
+    });
+	</script>
+</th:block>
+
+</body>
+</html>

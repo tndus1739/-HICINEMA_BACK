@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<section th:fragment="banner" class="hero-area4">
+    <div class="container_full">
+        <div class="row">
+            <div class="col-12">
+                <div class="home-slider-4 banner-img">
+                    <div class="big-content banner-img" th:each="img: ${images}"
+                         th:style="'background-image: url(\'' + ${img} + '\')'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</html>

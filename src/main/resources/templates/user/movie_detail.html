@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout_user1}">
+
+<th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{/css/movie_detail.css}">
+    <style>
+        .about-img.overlay .button {
+            position: unset;
+        }
+    </style>
+</th:block>
+
+<div layout:fragment="content">
+    <!-- Shop Single -->
+    <section class="shop single section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-lg-6 col-12 single-poster">
+                            <div class="single-thumb">
+                                <img src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_103_1.jpg"
+                                     alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="product-des">
+                                <!-- Description -->
+                                <div class="short">
+                                    <h4 class="h4-title">
+                                        영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목영화제목</h4>
+                                    <div class="rating-main">
+                                        <ul class="rating">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star-half-o"></i></li>
+                                            <li class="dark"><i class="fa fa-star-o"></i></li>
+                                        </ul>
+                                    </div>
+                                    <!--												<a href="#" class="total-review">(102) Review</a>-->
+                                    <!--												<p class="price"><span class="discount">$70.00</span><s>$80.00</s> </p>-->
+                                    <p class="description movie-desc">
+                                        영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용
+                                        영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용
+                                        영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용
+                                        영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용
+                                        영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용
+                                        영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용
+                                        영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용
+                                        영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용
+                                        영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용
+                                        영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용
+                                        영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용
+                                        영화 내용 영화 내용 영화 내용 영화 내용 영화 내용 영화 내용
+                                    </p>
+                                </div>
+                                <!--/ End Description -->
+                                <!-- Product Buy -->
+                                <div class="product-buy">
+                                    <div class="add-to-cart">
+                                        <a href="#" class="btn">예매하기</a>
+                                        <a href="#" class="btn min"><i class="ti-heart"></i></a>
+                                    </div>
+                                    <p class="cat">감독 :<a href="#">감독명</a></p>
+                                    <p class="cat">장르 :<a href="#">장르1, 장르2</a></p>
+                                    <p class="cat">배우 :<a href="#">배우1, 배우2, 배우3,배우1, 배우2, 배우3</a></p>
+                                </div>
+                                <!--/ End Product Buy -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="product-info">
+                                <div class="nav-main">
+                                    <!-- Tab Nav -->
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item"><a class="nav-link active" data-toggle="tab"
+                                                                href="#trailer"
+                                                                role="tab">예고편</a></li>
+                                        <li class="nav-item"><a class="nav-link" data-toggle="tab"
+                                                                href="#description" role="tab">스틸컷</a></li>
+                                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#reviews"
+                                                                role="tab">관람평</a></li>
+                                    </ul>
+                                    <!--/ End Tab Nav -->
+                                </div>
+                                <div class="tab-content" id="myTabContent">
+                                    <!-- trailer start-->
+                                    <div class="tab-pane fade show active" id="trailer" role="tabpanel">
+                                        <div class="about-us section">
+                                            <div class="col-lg-6 col-12">
+                                                <div class="about-img overlay">
+                                                    <div class="button">
+                                                        <a href="https://www.youtube.com/watch?v=nh2aYrGMrIE"
+                                                           class="video video-popup mfp-iframe"><i
+                                                                class="fa fa-play"></i></a>
+                                                    </div>
+                                                    <img src="https://via.placeholder.com/775x550" alt="#">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- trailer end -->
+                                    <!-- Description Tab -->
+                                    <div class="tab-pane fade" id="description" role="tabpanel">
+                                        <div class="tab-single">
+                                            <div class="row">
+                                                <div class="col-lg-5 col-12">
+                                                    <!-- Product Slider -->
+                                                    <a href="#" data-toggle="modal" data-target="#exampleModal"
+                                                       title="Quick View">
+                                                        <img src="http://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_105_1.jpg">
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-5 col-12">
+                                                    <!-- Product Slider -->
+                                                    <a href="#" data-toggle="modal" data-target="#exampleModal"
+                                                       title="Quick View">
+                                                        <img src="http://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_105_1.jpg">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/ End Description Tab -->
+                                    <!-- Reviews Tab -->
+                                    <div class="tab-pane fade" id="reviews" role="tabpanel">
+                                        <div class="tab-single review-panel">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="ratting-main">
+                                                        <div class="avg-ratting">
+                                                            <h4>4.5 <span>(Overall)</span></h4>
+                                                            <span>Based on 1 Comments</span>
+                                                        </div>
+                                                        <!-- Single Rating -->
+                                                        <div class="single-rating">
+                                                            <div class="rating-author">
+                                                                <img src="https://via.placeholder.com/200x200" alt="#">
+                                                            </div>
+                                                            <div class="rating-des">
+                                                                <h6>Naimur Rahman</h6>
+                                                                <div class="ratings">
+                                                                    <ul class="rating">
+                                                                        <li><i class="fa fa-star"></i></li>
+                                                                        <li><i class="fa fa-star"></i></li>
+                                                                        <li><i class="fa fa-star"></i></li>
+                                                                        <li><i class="fa fa-star-half-o"></i></li>
+                                                                        <li><i class="fa fa-star-o"></i></li>
+                                                                    </ul>
+                                                                    <div class="rate-count">(<span>3.5</span>)</div>
+                                                                </div>
+                                                                <p>Duis tincidunt mauris ac aliquet congue. Donec
+                                                                    vestibulum
+                                                                    consequat cursus. Aliquam pellentesque nulla dolor,
+                                                                    in
+                                                                    imperdiet.</p>
+                                                            </div>
+                                                        </div>
+                                                        <!--/ End Single Rating -->
+                                                        <!-- Single Rating -->
+                                                        <div class="single-rating">
+                                                            <div class="rating-author">
+                                                                <img src="https://via.placeholder.com/200x200" alt="#">
+                                                            </div>
+                                                            <div class="rating-des">
+                                                                <h6>Advin Geri</h6>
+                                                                <div class="ratings">
+                                                                    <ul class="rating">
+                                                                        <li><i class="fa fa-star"></i></li>
+                                                                        <li><i class="fa fa-star"></i></li>
+                                                                        <li><i class="fa fa-star"></i></li>
+                                                                        <li><i class="fa fa-star"></i></li>
+                                                                        <li><i class="fa fa-star"></i></li>
+                                                                    </ul>
+                                                                    <div class="rate-count">(<span>5.0</span>)</div>
+                                                                </div>
+                                                                <p>Duis tincidunt mauris ac aliquet congue. Donec
+                                                                    vestibulum
+                                                                    consequat cursus. Aliquam pellentesque nulla dolor,
+                                                                    in
+                                                                    imperdiet.</p>
+                                                            </div>
+                                                        </div>
+                                                        <!--/ End Single Rating -->
+                                                    </div>
+                                                    <!-- Review -->
+                                                    <div class="comment-review">
+                                                        <div class="add-review">
+                                                            <h5>Add A Review</h5>
+                                                            <p>Your email address will not be published. Required fields
+                                                                are
+                                                                marked</p>
+                                                        </div>
+                                                        <h4>Your Rating</h4>
+                                                        <div class="review-inner">
+                                                            <div class="ratings">
+                                                                <ul class="rating">
+                                                                    <li><i class="fa fa-star"></i></li>
+                                                                    <li><i class="fa fa-star"></i></li>
+                                                                    <li><i class="fa fa-star"></i></li>
+                                                                    <li><i class="fa fa-star"></i></li>
+                                                                    <li><i class="fa fa-star"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--/ End Review -->
+                                                    <!-- Form -->
+                                                    <form class="form" method="post" action="mail/mail.php">
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-12">
+                                                                <div class="form-group">
+                                                                    <label>Your Name<span>*</span></label>
+                                                                    <input type="text" name="name" required="required"
+                                                                           placeholder="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6 col-12">
+                                                                <div class="form-group">
+                                                                    <label>Your Email<span>*</span></label>
+                                                                    <input type="email" name="email" required="required"
+                                                                           placeholder="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12 col-12">
+                                                                <div class="form-group">
+                                                                    <label>Write a review<span>*</span></label>
+                                                                    <textarea name="message" rows="6"
+                                                                              placeholder=""></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12 col-12">
+                                                                <div class="form-group button5">
+                                                                    <button type="submit" class="btn">Submit</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    <!--/ End Form -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/ End Reviews Tab -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Shop Single -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ti-close"
+                                                                                                      aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="">
+                            <img src="http://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202401/20701_105_1.jpg"
+                                 alt="#">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
+</div>
+
+<th:block layout:fragment="script">
+
+</th:block>
+</html>

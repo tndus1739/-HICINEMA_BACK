@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title th:text="${title}">관리자</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" th:href="@{/admin/vendors/iconfonts/mdi/css/materialdesignicons.min.css}">
+    <link rel="stylesheet" th:href="@{/admin/vendors/css/vendor.bundle.base.css}">
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link rel="stylesheet" th:href="@{/admin/css/style.css}">
+    <!-- endinject -->
+    <link rel="shortcut icon" th:href="@{/admin/images/favicon.png}" />
+
+    <th:block layout:fragment="css"></th:block>
+</head>
+<body>
+<div class="container-scroller">
+
+    <nav th:replace="fragments/header_admin::header" class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row"></nav>
+
+    <div class="container-fluid page-body-wrapper">
+        <nav th:replace="fragments/side_admin::side"></nav>
+        <div class="main-panel">
+            <div layout:fragment="content" class="content-wrapper">
+
+            </div>
+            <footer th:replace="fragments/footer_admin::footer"></footer>
+        </div>
+    </div>
+</div>
+
+<!-- plugins:js -->
+<script th:src="@{/admin/vendors/js/vendor.bundle.base.js}"></script>
+<script th:src="@{/admin/vendors/js/vendor.bundle.addons.js}"></script>
+<!-- endinject -->
+<!-- Plugin js for this page-->
+<!-- End plugin js for this page-->
+<!-- inject:js -->
+<script th:src="@{/admin/js/off-canvas.js}"></script>
+<script th:src="@{/admin/js/misc.js}"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script th:src="@{/admin/js/dashboard.js}"></script>
+<!-- End custom js for this page-->
+<th:block layout:fragment="script"></th:block>
+</body>
+</html>

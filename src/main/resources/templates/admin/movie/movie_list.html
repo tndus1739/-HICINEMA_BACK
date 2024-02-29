@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout_admin}">
+
+<th:block layout:fragment="css">
+    <style>
+        th, td {
+            text-align: center;
+        }
+
+        .screen-type code{
+            cursor: pointer;
+        }
+
+        .screen-type code:hover, .screen-type code.active {
+            border-bottom: 1px solid #e83e8c;
+        }
+    </style>
+</th:block>
+
+<div class="container-scroller">
+
+    <div class="container-fluid page-body-wrapper">
+
+        <div class="main-panel">
+            <div layout:fragment="content" class="content-wrapper">
+                <div class="page-header">
+                    <h3 class="page-title">
+                        영화
+                    </h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Basic tables</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <h4 class="card-title">영화 리스트</h4>
+                                        <p class="card-description screen-type">
+                                            <code data-link="/admin/movie/movie_list">상영중</code>
+                                            <code data-link="/admin/movie/movie_listSoon">상영예정</code>
+                                            <code data-link="/admin/movie/movie_listEnd">상영종료</code>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="/admin/movie/theater_form" class="btn btn-gradient-info mr-2"
+                                           style="float: right">영화 업데이트</a>
+                                        <a href="/admin/movie/movie_form" class="btn btn-gradient-primary mr-2"
+                                           style="float: right">영화 추가</a>
+                                    </div>
+                                </div>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlSelect3">장르</label>
+                                                <select class="form-control form-control-sm"
+                                                        id="exampleFormControlSelect3">
+                                                    <option>전체</option>
+                                                    <option>액션</option>
+                                                    <option>판타지</option>
+                                                    <option>드라마</option>
+                                                    <option>스릴러</option>
+                                                    <option>공포</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="exampleInputUsername1">영화 제목</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1"
+                                                       placeholder="Username">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2" style="align-self: center;">
+                                            <button type="submit" class="btn btn-gradient-primary mb-2">검색</button>
+                                        </div>
+                                        <div class="col-lg-2" style="align-self: center;text-align: right">
+                                            <button type="submit" class="btn btn-gradient-danger mb-2">삭제</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th width="5%">
+                                            <input type="checkbox" class="all_check">
+                                        </th>
+                                        <th width="5%">No</th>
+                                        <th width="25%">장르</th>
+                                        <th width="30%">영화 제목</th>
+                                        <th width="10%">상영등급</th>
+                                        <th width="10%">러닝타임</th>
+                                        <th width="10%">개봉일</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox">
+                                        </td>
+                                        <td>1</td>
+                                        <td>판타지, 드라마 / 미국</td>
+                                        <td class="text-primary"><a href="/admin/movie/movie_detail">웡카</a></td>
+                                        <td>전체관람가</td>
+                                        <td>116</td>
+                                        <td>2024.01.31</td>
+                                    </tbody>
+                                </table>
+                                <div class="pagination-area" style="text-align: center">
+                                    <ul class="pagination" style="display: inline-flex; padding-top: 5%">
+                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<th:block layout:fragment="script">
+<script>
+    let code = document.querySelectorAll(".screen-type code")
+    let current = location.pathname.split("/").slice(-1)[0].replace(/^\/|\/$/g, '');
+    for(let c of code) {
+        let cur_code = c.dataset.link.split("/").slice(-1)[0].replace(/^\/|\/$/g, '');
+        if(cur_code === current) {
+            c.classList.add("active");
+        }
+        c.onclick = () => {
+            location.href = c.dataset.link;
+        }
+    }
+</script>
+</th:block>
+
+</body>
+</html>

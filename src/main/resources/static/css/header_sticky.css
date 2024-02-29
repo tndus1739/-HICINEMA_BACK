@@ -1,0 +1,251 @@
+.preloader {
+  display: none;
+}
+#after .middle-inner {
+  background-color: #ffffff !important;
+  box-shadow: 0 8px 8px -5px rgba(97, 97, 97, 0.6);
+  /* background-color: transparent !important; */
+  position: fixed !important;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 0 !important;
+  height: 60px !important;
+}
+
+#after .header_content {
+  /* border: solid 1px red; */
+  /* background-image: url(../images/IfOnly_1920774.jpg); */
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*background-color: #ffffff !important;*/
+}
+
+#after .top_navmenu {
+  /* border: solid 1px blue; */
+  width: 98%;
+  height: 66px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 20px;
+}
+
+/* logo ======= */
+#after .hicinema_logo {
+  display: flex;
+  align-items: flex-end;
+  /* border: solid 1px salmon; */
+  /* padding: 10px; */
+  padding-top: 0 !important;
+}
+
+#after .logologo {
+  font-family: Russo One;
+  letter-spacing: 2px;
+  color: #5c1e91;
+  font-size: 3em;
+  position: relative;
+}
+
+#after .logologo a {
+  padding: 0px !important;
+  /* margin-top: 50px; */
+}
+
+/* nav ===================================================== */
+/* nav ================================ */
+#after #nav2 {
+  /* width: 980px; */
+  margin: 1px auto 0;
+  text-align: center;
+}
+#after #nav2 > ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#after #nav2 > ul > li {
+  display: inline-block;
+  /* vertical-align: top; */
+}
+#after #nav2 > ul > li > a {
+  display: block;
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 35px;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  color: #000000;
+  font-weight: 500;
+}
+#after #nav2 > ul > li > a:before {
+  content: "";
+  opacity: 0.7;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 9px;
+  margin-top: -5px;
+
+  border-left: 2px solid #000000;
+}
+#after #nav2 > ul > li:first-child a:before {
+  display: none;
+}
+#after #nav2 > ul > li > div {
+  display: none;
+  position: absolute;
+  z-index: 20;
+  /* left: 50px; */
+  right: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 79px;
+  height: 38px;
+  text-align: center;
+  background: rgb(215, 215, 215);
+  background: linear-gradient(
+    90deg,
+    rgba(215, 215, 215, 0) 0%,
+    rgba(215, 215, 215, 1) 10%,
+    rgba(215, 215, 215, 1) 55%,
+    rgba(215, 215, 215, 1) 90%,
+    rgba(215, 215, 215, 0) 100%
+  );
+  width: 100%;
+}
+#after #nav2 > ul > li > div > ul {
+  opacity: 0;
+  display: inline-block;
+}
+#after #nav2 > ul > li > div > ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#after #nav2 > ul > li > div > ul > li {
+  float: left;
+  margin: 1px 10px 0px 10px;
+}
+
+#after #nav2 > ul > li > div > ul > li > a {
+  display: block;
+  height: 38px;
+  line-height: 36px;
+  padding: 0 5px;
+  color: #000000;
+  font-size: 13px;
+}
+
+#after #nav2 > ul > li > div > ul > li > a:hover {
+  color: #a5335f;
+  font-weight: 800;
+  /* font-size: 14px; */
+}
+#after #nav2 > ul > li > div > ul > li > div {
+  display: none;
+  position: absolute;
+  z-index: 50;
+  left: 0;
+  right: 0;
+  top: 38px;
+  height: 38px;
+  text-align: center;
+  background: rgb(152, 152, 152);
+  background: linear-gradient(
+    90deg,
+    rgba(152, 152, 152, 0) 0%,
+    rgb(185, 185, 185) 10%,
+    rgba(185, 185, 185, 1) 55%,
+    rgba(185, 185, 185, 1) 90%,
+    rgba(185, 185, 185, 0) 100%
+  );
+}
+#after #nav2 > ul > li > div > ul > li > div > ul {
+  opacity: 0;
+  display: inline-block;
+  width: 980px;
+  margin: 9px 0;
+}
+#after #nav2 > ul > li > div > ul > li > div > ul > li {
+  display: inline-block;
+  margin: 0px 5px;
+}
+#after #nav2 > ul > li > div > ul > li > div > ul > li > a {
+  display: block;
+  /* opacity: 0.8; */
+  height: 11px;
+  line-height: 11px;
+  padding: 0 5px;
+  color: #000000;
+  font-size: 13px;
+}
+
+/* active :depth2 */
+#after #nav2 > ul > li.active > a,
+#after #nav2 > ul > li.ov > a,
+#after #nav2 > ul > li:hover > a {
+  margin-top: 10px;
+  height: 49px;
+  border-bottom: 3px solid #f099b5;
+  margin-bottom: 0;
+}
+#after #nav2 > ul > li.active > div,
+#after #nav2 > ul > li.ov > div,
+#after #nav2 > ul > li:hover > div {
+  display: block;
+}
+#after #nav2 > ul > li.active > div > ul,
+#after #nav2 > ul > li.ov > div > ul,
+#after #nav2 > ul > li:hover > div > ul {
+  opacity: 1;
+}
+#after #nav2 > ul > li.active > div > ul > li.active > a,
+#after #nav2 > ul > li.ov > div > ul > li.active > a,
+#after #nav2 > ul > li.active > div > ul > li > a:hover {
+  color: #000000;
+}
+/* activ :depth3 */
+#after #nav2 > ul > li > div > ul > li.active > div,
+#after #nav2 > ul > li > div > ul > li.ov > div,
+#after #nav2 > ul > li > div > ul > li:hover > div {
+  display: block;
+}
+#after #nav2 > ul > li > div > ul > li.active > div > ul,
+#after #nav2 > ul > li > div > ul > li.ov > div > ul,
+#after #nav2 > ul > li > div > ul > li:hover > div > ul {
+  opacity: 1;
+  color: #fb66bb;
+}
+#after #nav2 > ul > li > div > ul > li > div > ul > li.active > a,
+#after #nav2 > ul > li > div > ul > li > div > ul > li.ov > a,
+#after #nav2 > ul > li > div > ul > li > div > ul > li > a:hover {
+  opacity: 1;
+  font-weight: 800;
+  /* font-size: 15px; */
+}
+
+.my {
+  font-weight: 800;
+  font-size: 20px;
+  color: #612695;
+  padding: 0px;
+}
+
+.my > a > i:hover {
+  color: #d66587;
+}
+
+
+.my > a > i {
+  padding: 3px 4px;
+}
+
